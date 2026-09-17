@@ -1,88 +1,146 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>うのび〜るハットグ｜2B 模擬店</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>うのび〜るハットグ｜2B 市商祭</title>
 
   <meta
     name="description"
-    content="高田商業高校文化祭 2B模擬店「うのび〜るハットグ」。チーズハットグ350円、スーパーボールすくい100円、ジュース150円。"
+    content="市商祭 2B模擬店「うのび〜るハットグ」。チーズハットグ350円、スーパーボールすくい100円。15個以上ですくえたらペットボトルジュース1本プレゼント。"
   >
 
-  <link rel="stylesheet" href="style.css">
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
 </head>
 
+
 <body>
+
+
+  <!-- =========================
+       NAV
+  ========================== -->
+
+  <nav class="nav">
+
+    <a
+      href="#top"
+      class="logo"
+    >
+      うのび〜るハットグ
+    </a>
+
+
+    <a
+      href="#map"
+      class="nav-button"
+    >
+      2Bはここ！
+    </a>
+
+  </nav>
+
+
 
   <!-- =========================
        HERO
   ========================== -->
-  <header class="hero">
 
-    <nav class="nav">
-      <a href="#" class="logo">
-        うのび〜るハットグ
-      </a>
-
-      <a href="#map" class="nav-button">
-        2Bはここ！
-      </a>
-    </nav>
+  <header
+    class="hero"
+    id="top"
+  >
 
     <div class="hero-inner">
+
 
       <div class="hero-text fade">
 
         <p class="class-label">
-          高田商業高校 文化祭 ｜ 2B 模擬店
+          市商祭 ｜ 2B 模擬店
         </p>
 
+
         <h1>
-          うのび〜る<br>
+          うのび〜る
           <span>ハットグ</span>
         </h1>
 
+
         <p class="hero-copy">
-          揚げたてのチーズハットグと、<br>
+          揚げたてのチーズハットグと、
           スーパーボールすくいを楽しもう。
         </p>
+
 
         <div class="hero-price-list">
 
           <div class="hero-price">
-            <span>チーズハットグ</span>
-            <strong>350<small>円</small></strong>
+
+            <span>
+              チーズハットグ
+            </span>
+
+            <strong>
+              350
+              <small>円</small>
+            </strong>
+
           </div>
 
+
           <div class="hero-price">
-            <span>スーパーボール</span>
-            <strong>100<small>円</small></strong>
+
+            <span>
+              スーパーボール
+            </span>
+
+            <strong>
+              100
+              <small>円</small>
+            </strong>
+
           </div>
 
         </div>
 
-        <a href="#movie" class="primary-button">
+
+        <a
+          href="#movie"
+          class="primary-button"
+        >
           CMを見る
         </a>
 
       </div>
 
 
+
+      <!-- タップで拡大 -->
+
       <div class="hero-image fade">
 
         <img
           src="images/hero.jpg"
-          alt="うのび〜るハットグ"
-          onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder');"
+          alt="市商祭 2B うのび〜るハットグ"
+          class="clickable-image"
         >
 
-        <div class="image-placeholder-text">
-          PHOTO
-        </div>
+        <span class="zoom-hint">
+          タップで拡大
+        </span>
 
       </div>
+
 
     </div>
 
@@ -90,18 +148,36 @@
 
 
 
+
   <main>
 
+
     <!-- =========================
-         CM MOVIE
+         MOVIE
     ========================== -->
-    <section class="section movie-section" id="movie">
+
+    <section
+      class="section movie-section"
+      id="movie"
+    >
 
       <div class="section-heading fade">
-        <span class="section-number">01</span>
-        <p>まずはこちら</p>
-        <h2>CM MOVIE</h2>
+
+        <span class="section-number">
+          01
+        </span>
+
+        <p>
+          まずはこちら
+        </p>
+
+        <h2>
+          CM MOVIE
+        </h2>
+
       </div>
+
+
 
       <div class="movie-card fade">
 
@@ -122,76 +198,132 @@
 
 
 
+
+
     <!-- =========================
          HATGU
     ========================== -->
+
     <section class="section hatgu-section">
 
       <div class="section-heading fade">
-        <span class="section-number">02</span>
-        <p>メインメニュー</p>
-        <h2>CHEESE HATGU</h2>
+
+        <span class="section-number">
+          02
+        </span>
+
+        <p>
+          メインメニュー
+        </p>
+
+        <h2>
+          CHEESE HATGU
+        </h2>
+
       </div>
 
 
+
       <div class="product-grid">
+
 
         <div class="product-image fade">
 
           <img
             src="images/hatgu.jpg"
             alt="チーズハットグ"
-            onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder');"
           >
-
-          <div class="image-placeholder-text">
-            HATGU PHOTO
-          </div>
 
         </div>
 
 
+
         <div class="product-content fade">
 
-          <div class="product-badge">
+
+          <span class="product-badge">
             揚げたて
-          </div>
+          </span>
+
 
           <h3>
             李さんの<br>
             韓国チーズドッグ
           </h3>
 
+
           <p class="product-lead">
             一本一本手作りされたチーズハットグを、
             その場で揚げてご提供します。
+            揚げたてならではのおいしさを
+            ぜひお楽しみください。
           </p>
 
+
+
           <div class="big-price">
-            <span>1本</span>
-            <strong>350</strong>
-            <span>円</span>
+
+            <span>
+              1本
+            </span>
+
+            <strong>
+              350
+            </strong>
+
+            <span>
+              円
+            </span>
+
           </div>
+
 
 
           <div class="feature-list">
 
-            <div class="feature">
-              <span>01</span>
-              <p>手作りの本格チーズハットグ</p>
-            </div>
 
             <div class="feature">
-              <span>02</span>
-              <p>その場で揚げたてをご提供</p>
+
+              <span>
+                01
+              </span>
+
+              <p>
+                手作りの本格チーズハットグ
+              </p>
+
             </div>
 
+
+
             <div class="feature">
-              <span>03</span>
-              <p>外はサクッと、中はチーズたっぷり</p>
+
+              <span>
+                02
+              </span>
+
+              <p>
+                その場で揚げたてをご提供
+              </p>
+
+            </div>
+
+
+
+            <div class="feature">
+
+              <span>
+                03
+              </span>
+
+              <p>
+                外はサクッと、中はチーズたっぷり
+              </p>
+
             </div>
 
           </div>
+
 
 
           <div class="online-price-note">
@@ -201,11 +333,15 @@
             </p>
 
             <p>
-              家庭向け公式通販では<br>
-              <strong>5本セット 2,160円</strong>の商品です。
+              家庭向け公式通販では
+              <strong>
+                5本セット 2,160円
+              </strong>
+              の商品です。
             </p>
 
           </div>
+
 
         </div>
 
@@ -215,62 +351,112 @@
 
 
 
+
+
     <!-- =========================
          SUPER BALL
     ========================== -->
+
     <section class="section superball-section">
 
-      <div class="section-heading fade light-heading">
-        <span class="section-number">03</span>
-        <p>チャレンジ！</p>
-        <h2>SUPER BALL</h2>
+
+      <div class="section-heading fade">
+
+        <span class="section-number">
+          03
+        </span>
+
+        <p>
+          チャレンジ！
+        </p>
+
+        <h2>
+          SUPER BALL
+        </h2>
+
       </div>
+
 
 
       <div class="superball-card fade">
 
+
         <div class="superball-content">
+
 
           <p class="superball-label">
             スーパーボールすくい
           </p>
 
+
+
           <div class="superball-price">
-            <strong>100</strong>
-            <span>円</span>
+
+            <strong>
+              100
+            </strong>
+
+            <span>
+              円
+            </span>
+
           </div>
+
 
           <p class="superball-caption">
             1回
           </p>
 
 
+
           <div class="challenge-box">
+
 
             <span class="challenge-small">
               CHALLENGE
             </span>
 
-            <strong>15</strong>
 
-            <span class="challenge-unit">
-              個以上
-            </span>
+            <div class="challenge-number">
+
+              <strong>
+                15
+              </strong>
+
+              <span>
+                個以上
+              </span>
+
+            </div>
+
 
             <p>
-              すくえたら<br>
-              <b>ジュース1本プレゼント！</b>
+              すくえたら
+              <b>
+                ペットボトルのジュース
+                1本プレゼント！
+              </b>
             </p>
 
           </div>
 
 
+
           <div class="juice-info">
-            ジュースのみの購入もOK
-            <strong>1本 150円</strong>
+
+            <span>
+              ジュースのみの購入もOK
+            </span>
+
+            <strong>
+              1本 150円
+            </strong>
+
           </div>
 
         </div>
+
+
 
 
         <div class="superball-image">
@@ -278,137 +464,232 @@
           <img
             src="images/superball.jpg"
             alt="スーパーボールすくい"
-            onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder');"
           >
 
-          <div class="image-placeholder-text">
-            SUPER BALL PHOTO
-          </div>
-
         </div>
+
 
       </div>
 
     </section>
+
+
 
 
 
     <!-- =========================
          MENU
     ========================== -->
+
     <section class="section menu-section">
 
+
       <div class="section-heading fade">
-        <span class="section-number">04</span>
-        <p>メニュー</p>
-        <h2>MENU</h2>
+
+        <span class="section-number">
+          04
+        </span>
+
+        <p>
+          メニュー
+        </p>
+
+        <h2>
+          MENU
+        </h2>
+
       </div>
+
 
 
       <div class="menu-grid fade">
 
+
         <div class="menu-card">
-          <span class="menu-icon">01</span>
+
+          <span class="menu-icon">
+            01
+          </span>
 
           <div>
-            <h3>チーズハットグ</h3>
-            <p>揚げたてでご提供</p>
+
+            <h3>
+              チーズハットグ
+            </h3>
+
+            <p>
+              揚げたてでご提供
+            </p>
+
           </div>
 
-          <strong>350円</strong>
+          <strong>
+            350円
+          </strong>
+
         </div>
 
 
+
         <div class="menu-card">
-          <span class="menu-icon">02</span>
+
+          <span class="menu-icon">
+            02
+          </span>
 
           <div>
-            <h3>スーパーボールすくい</h3>
-            <p>15個以上でジュースGET！</p>
+
+            <h3>
+              スーパーボールすくい
+            </h3>
+
+            <p>
+              15個以上でジュースGET！
+            </p>
+
           </div>
 
-          <strong>100円</strong>
+          <strong>
+            100円
+          </strong>
+
         </div>
 
 
+
         <div class="menu-card">
-          <span class="menu-icon">03</span>
+
+          <span class="menu-icon">
+            03
+          </span>
 
           <div>
-            <h3>ジュース</h3>
-            <p>単品でも購入できます</p>
+
+            <h3>
+              ジュース
+            </h3>
+
+            <p>
+              単品でも購入できます
+            </p>
+
           </div>
 
-          <strong>150円</strong>
+          <strong>
+            150円
+          </strong>
+
         </div>
+
 
       </div>
 
     </section>
+
+
 
 
 
     <!-- =========================
          MAP
     ========================== -->
-    <section class="section map-section" id="map">
+
+    <section
+      class="section map-section"
+      id="map"
+    >
+
 
       <div class="section-heading fade">
-        <span class="section-number">05</span>
-        <p>場所はこちら</p>
-        <h2>2Bはここ！</h2>
+
+        <span class="section-number">
+          05
+        </span>
+
+        <p>
+          場所はこちら
+        </p>
+
+        <h2>
+          2Bはここ！
+        </h2>
+
       </div>
 
+
+
+      <!-- タップで拡大 -->
 
       <div class="map-card fade">
 
         <img
           src="images/map2b.jpg"
           alt="2B 模擬店の場所"
-          onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder');"
+          class="clickable-image"
         >
 
-        <div class="image-placeholder-text">
-          MAP
-        </div>
+        <span class="zoom-hint">
+          タップで拡大
+        </span>
 
       </div>
+
 
     </section>
 
 
 
+
+
     <!-- =========================
-         END
+         CLOSING
     ========================== -->
+
     <section class="closing-section">
+
 
       <div class="closing-inner fade">
 
+
         <p class="closing-small">
-          高田商業高校 文化祭
+          市商祭
         </p>
 
+
         <h2>
-          2B<br>
-          <span>うのび〜るハットグ</span>
+          2B
+          <span>
+            うのび〜るハットグ
+          </span>
         </h2>
+
 
         <p>
           ぜひお立ち寄りください！
         </p>
 
-        <a href="#movie" class="secondary-button">
+
+        <a
+          href="#movie"
+          class="secondary-button"
+        >
           CMをもう一度見る
         </a>
+
 
       </div>
 
     </section>
 
+
   </main>
 
 
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
 
   <footer>
 
@@ -419,7 +700,45 @@
   </footer>
 
 
+
+
+  <!-- =========================
+       IMAGE MODAL
+       hero / map 拡大用
+  ========================== -->
+
+  <div
+    class="image-modal"
+    id="imageModal"
+    aria-hidden="true"
+  >
+
+
+    <button
+      class="image-modal-close"
+      id="imageModalClose"
+      aria-label="画像を閉じる"
+    >
+      ×
+    </button>
+
+
+    <img
+      src=""
+      alt=""
+      class="image-modal-content"
+      id="imageModalContent"
+    >
+
+
+  </div>
+
+
+
+
   <script src="script.js"></script>
 
+
 </body>
+
 </html>
