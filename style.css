@@ -911,3 +911,508 @@ footer {
   }
 
 }
+
+/* ========================================
+   MOBILE FIRST ADJUSTMENTS
+   スマホ表示最適化
+======================================== */
+
+@media (max-width: 800px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+
+  /* -------------------------
+     全体
+  ------------------------- */
+
+  .section {
+    padding: 58px 16px;
+  }
+
+  .section-heading {
+    margin-bottom: 24px;
+  }
+
+  .section-heading h2 {
+    font-size: clamp(34px, 11vw, 52px);
+    line-height: 1;
+  }
+
+  .section-heading p {
+    font-size: 12px;
+  }
+
+  .section-number {
+    width: 34px;
+    height: 34px;
+    font-size: 11px;
+  }
+
+
+  /* -------------------------
+     NAV
+  ------------------------- */
+
+  .nav {
+    padding: 16px;
+  }
+
+  .logo {
+    font-size: 14px;
+  }
+
+  .nav-button {
+    padding: 9px 14px;
+    font-size: 12px;
+  }
+
+
+  /* -------------------------
+     HERO
+  ------------------------- */
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-inner {
+    min-height: auto;
+
+    padding:
+      28px
+      16px
+      60px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 28px;
+  }
+
+  .hero-text {
+    width: 100%;
+  }
+
+  .class-label {
+    margin-bottom: 12px;
+
+    font-size: 12px;
+  }
+
+  .hero h1 {
+    font-size: clamp(54px, 16vw, 78px);
+    line-height: 0.92;
+
+    letter-spacing: -0.07em;
+  }
+
+  .hero-copy {
+    margin-top: 20px;
+
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+
+  /* -------------------------
+     HERO IMAGE
+     横長画像に変更
+  ------------------------- */
+
+  .hero-image {
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    max-height: none;
+
+    border-radius: 20px;
+
+    transform: none;
+
+    box-shadow:
+      0 12px 35px
+      rgba(0, 0, 0, 0.10);
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+
+  /* -------------------------
+     PRICE
+  ------------------------- */
+
+  .hero-price-list {
+    margin-top: 24px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+  }
+
+  .hero-price {
+    min-width: 0;
+
+    padding: 14px;
+
+    border-radius: 15px;
+  }
+
+  .hero-price span {
+    font-size: 11px;
+  }
+
+  .hero-price strong {
+    margin-top: 5px;
+
+    font-size: 28px;
+  }
+
+
+  /* -------------------------
+     BUTTON
+  ------------------------- */
+
+  .primary-button,
+  .secondary-button {
+    width: 100%;
+
+    margin-top: 24px;
+
+    padding: 15px 20px;
+
+    font-size: 14px;
+  }
+
+
+  /* -------------------------
+     YOUTUBE
+  ------------------------- */
+
+  .movie-card {
+    width: 100%;
+
+    padding: 6px;
+
+    border-radius: 18px;
+  }
+
+  .youtube-wrapper {
+    aspect-ratio: 16 / 9;
+  }
+
+  .youtube-wrapper iframe {
+    border-radius: 13px;
+  }
+
+
+  /* -------------------------
+     HATGU
+  ------------------------- */
+
+  .product-grid {
+    display: flex;
+    flex-direction: column;
+
+    gap: 28px;
+  }
+
+  .product-image {
+    width: 100%;
+
+    /* 紹介画像も横長前提 */
+    aspect-ratio: 16 / 9;
+
+    max-height: none;
+
+    border-radius: 20px;
+  }
+
+  .product-image img {
+    object-fit: cover;
+  }
+
+  .product-content h3 {
+    margin-top: 14px;
+
+    font-size: clamp(34px, 11vw, 48px);
+  }
+
+  .product-lead {
+    margin-top: 15px;
+
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .product-badge {
+    padding: 7px 13px;
+
+    font-size: 12px;
+  }
+
+
+  /* -------------------------
+     PRICE 350
+  ------------------------- */
+
+  .big-price {
+    margin-top: 22px;
+  }
+
+  .big-price strong {
+    font-size: 76px;
+  }
+
+
+  /* -------------------------
+     FEATURES
+  ------------------------- */
+
+  .feature-list {
+    margin-top: 26px;
+  }
+
+  .feature {
+    padding: 13px 0;
+  }
+
+  .feature p {
+    font-size: 14px;
+  }
+
+
+  /* -------------------------
+     ONLINE PRICE
+  ------------------------- */
+
+  .online-price-note {
+    margin-top: 24px;
+
+    padding: 17px;
+
+    border-radius: 16px;
+
+    font-size: 13px;
+  }
+
+
+  /* -------------------------
+     SUPER BALL
+  ------------------------- */
+
+  .superball-card {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 10px;
+
+    gap: 15px;
+
+    border-radius: 24px;
+  }
+
+  .superball-content {
+    padding: 18px 10px 8px;
+  }
+
+  .superball-label {
+    font-size: 16px;
+  }
+
+  .superball-price strong {
+    font-size: 84px;
+  }
+
+  .superball-price span {
+    font-size: 19px;
+  }
+
+
+  /* スーパーボール画像も横長 */
+  .superball-image {
+    width: 100%;
+
+    min-height: 0;
+
+    aspect-ratio: 16 / 9;
+
+    border-radius: 18px;
+  }
+
+  .superball-image img {
+    object-fit: cover;
+  }
+
+
+  /* -------------------------
+     CHALLENGE
+  ------------------------- */
+
+  .challenge-box {
+    margin-top: 24px;
+
+    padding: 18px;
+
+    border-radius: 18px;
+  }
+
+  .challenge-box strong {
+    font-size: 64px;
+  }
+
+  .challenge-unit {
+    font-size: 18px;
+  }
+
+  .challenge-box p {
+    font-size: 16px;
+  }
+
+
+  /* -------------------------
+     JUICE
+  ------------------------- */
+
+  .juice-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 14px;
+
+    padding: 13px;
+
+    font-size: 12px;
+  }
+
+
+  /* -------------------------
+     MENU
+  ------------------------- */
+
+  .menu-grid {
+    gap: 10px;
+  }
+
+  .menu-card {
+    padding: 16px;
+
+    grid-template-columns:
+      36px
+      1fr
+      auto;
+
+    gap: 12px;
+
+    border-radius: 16px;
+  }
+
+  .menu-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .menu-card h3 {
+    font-size: 14px;
+  }
+
+  .menu-card p {
+    font-size: 11px;
+  }
+
+  .menu-card strong {
+    grid-column: auto;
+
+    font-size: 20px;
+
+    white-space: nowrap;
+  }
+
+
+  /* -------------------------
+     MAP
+     横長地図に合わせる
+  ------------------------- */
+
+  .map-card {
+    width: 100%;
+
+    min-height: 0;
+
+    aspect-ratio: 4 / 3;
+
+    border: 5px solid #fff;
+
+    border-radius: 20px;
+  }
+
+  .map-card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    background: #fff;
+  }
+
+
+  /* -------------------------
+     CLOSING
+  ------------------------- */
+
+  .closing-section {
+    padding: 75px 18px;
+  }
+
+  .closing-section h2 {
+    font-size: clamp(52px, 15vw, 74px);
+  }
+
+  .closing-section > div > p:not(.closing-small) {
+    margin-top: 20px;
+
+    font-size: 16px;
+  }
+
+}
+
+@media (max-width: 420px) {
+
+  .hero h1 {
+    font-size: 55px;
+  }
+
+  .hero-price strong {
+    font-size: 25px;
+  }
+
+  .big-price strong {
+    font-size: 68px;
+  }
+
+  .superball-price strong {
+    font-size: 76px;
+  }
+
+  .menu-card {
+    grid-template-columns:
+      32px
+      1fr
+      auto;
+  }
+
+}
