@@ -522,13 +522,12 @@ button {
     rgba(0, 0, 0, 0.12);
 }
 
+
 .ad-poster {
   display: block;
 
   width: 100%;
   height: auto;
-
-  max-height: none;
 
   object-fit: contain;
 
@@ -536,8 +535,6 @@ button {
 
   cursor: zoom-in;
 }
-
-
 
 /* ========================================
    LOCATION BUTTON
