@@ -127,12 +127,9 @@ const galleryData = {
       x: 60.3,
       y: 38.6,
 
-      /* 2B専用ホームページ */
-      linkUrl:
-        "https://leaeningenglishforzenshoezam.github.io/culture-festival/",
-
-      linkLabel:
-        "2Bホームページを見る"
+      /* 拡大時のみQR部分をリンク化 */
+      qrLink:
+        "https://leaeningenglishforzenshoezam.github.io/culture-festival/"
     },
 
 
@@ -259,26 +256,22 @@ const galleryData = {
   other: [
 
 
-    /* ------------------------
-       美術部
-    ------------------------- */
+    /* 美術部：体育館 */
 
     {
       id: "art",
       label: "美術部",
       image: "images/gallery/art.jpg",
 
-      mapLabel: "美術部",
+      mapLabel: "体育館",
       mapColor: "#ff4f93",
 
-      x: 59.3,
-      y: 87.5
+      x: 11.0,
+      y: 40.0
     },
 
 
-    /* ------------------------
-       家庭部
-    ------------------------- */
+    /* 家庭部 */
 
     {
       id: "homeeconomics",
@@ -293,9 +286,7 @@ const galleryData = {
     },
 
 
-    /* ------------------------
-       茶道部
-    ------------------------- */
+    /* 茶道部 */
 
     {
       id: "tea",
@@ -310,9 +301,7 @@ const galleryData = {
     },
 
 
-    /* ------------------------
-       同窓会
-    ------------------------- */
+    /* 同窓会 */
 
     {
       id: "alumni",
@@ -327,9 +316,7 @@ const galleryData = {
     },
 
 
-    /* ------------------------
-       PTA
-    ------------------------- */
+    /* PTA */
 
     {
       id: "pta",
@@ -344,9 +331,7 @@ const galleryData = {
     },
 
 
-    /* ------------------------
-       生徒会
-    ------------------------- */
+    /* 生徒会 */
 
     {
       id: "student-council",
@@ -361,9 +346,7 @@ const galleryData = {
     },
 
 
-    /* ------------------------
-       日本語学院
-    ------------------------- */
+    /* 日本語学院 */
 
     {
       id: "japanese-school",
@@ -378,26 +361,8 @@ const galleryData = {
     },
 
 
-    /* ------------------------
-       商業科
-    ------------------------- */
-
-    {
-      id: "commerce",
-      label: "商業科",
-      image: "images/gallery/commerce.jpg",
-
-      mapLabel: "商業科",
-      mapColor: "#ff4f93",
-
-      x: 76.0,
-      y: 60.6
-    },
-
-
-
     /* ========================================
-       体育館
+       アカペラ部：昇降口前
     ======================================== */
 
     {
@@ -405,17 +370,22 @@ const galleryData = {
       label: "アカペラ部",
       image: "images/gallery/acappella.jpg",
 
-      mapLabel: "体育館",
+      mapLabel: "昇降口前",
       mapColor: "#ff4f93",
 
-      x: 11.0,
-      y: 40.0
+      x: 29.0,
+      y: 78.0
     },
 
+
+    /* ========================================
+       体育館
+    ======================================== */
 
     {
       id: "flower-arrangement",
       label: "華道部",
+
       image:
         "images/gallery/flower-arrangement.jpg",
 
@@ -430,6 +400,7 @@ const galleryData = {
     {
       id: "calligraphy",
       label: "書道部",
+
       image:
         "images/gallery/calligraphy.jpg",
 
@@ -439,7 +410,6 @@ const galleryData = {
       x: 11.0,
       y: 40.0
     },
-
 
 
     /* ========================================
@@ -520,6 +490,12 @@ const modalImage =
   );
 
 
+const qrHotspot =
+  document.getElementById(
+    "qrHotspot"
+  );
+
+
 const mapModal =
   document.getElementById(
     "mapModal"
@@ -579,11 +555,6 @@ function setupCover() {
     );
 
 
-  /*
-   * このタブで初めて
-   * ギャラリーを開いた時だけ表示
-   */
-
   if (!alreadySeen) {
 
     coverOverlay.classList.add(
@@ -604,15 +575,9 @@ function setupCover() {
   }
 
 
-
   coverEnter.addEventListener(
     "click",
     () => {
-
-      /*
-       * 「見た」ことを
-       * sessionStorageへ記録
-       */
 
       sessionStorage.setItem(
         "festivalCoverSeen",
@@ -689,9 +654,6 @@ function buildIndex() {
         "index-button";
 
 
-
-      /* クラス色 */
-
       if (item.colorClass) {
 
         link.classList.add(
@@ -700,9 +662,6 @@ function buildIndex() {
 
       }
 
-
-
-      /* 1年生共同展示 */
 
       if (item.special) {
 
@@ -713,9 +672,6 @@ function buildIndex() {
       }
 
 
-
-      /* 団体 */
-
       if (group === "other") {
 
         link.classList.add(
@@ -725,17 +681,10 @@ function buildIndex() {
       }
 
 
-
-      /*
-       * 共同展示のみ
-       * INDEXを短くする
-       */
-
       link.textContent =
         item.special
           ? "共同展示"
           : item.label;
-
 
 
       indexContainer.appendChild(
@@ -770,10 +719,6 @@ function buildAds() {
     (item) => {
 
 
-      /* =========================
-         ARTICLE
-      ========================== */
-
       const article =
         document.createElement(
           "article"
@@ -788,7 +733,6 @@ function buildAds() {
         `ad-${item.id}`;
 
 
-
       if (item.special) {
 
         article.classList.add(
@@ -799,9 +743,7 @@ function buildAds() {
 
 
 
-      /* =========================
-         HEADING
-      ========================== */
+      /* HEADING */
 
       const heading =
         document.createElement(
@@ -823,7 +765,6 @@ function buildAds() {
         "ad-class-label";
 
 
-
       if (item.colorClass) {
 
         label.classList.add(
@@ -831,7 +772,6 @@ function buildAds() {
         );
 
       }
-
 
       else if (item.special) {
 
@@ -841,7 +781,6 @@ function buildAds() {
 
       }
 
-
       else {
 
         label.classList.add(
@@ -849,7 +788,6 @@ function buildAds() {
         );
 
       }
-
 
 
       label.textContent =
@@ -862,9 +800,7 @@ function buildAds() {
 
 
 
-      /* =========================
-         IMAGE
-      ========================== */
+      /* IMAGE */
 
       const frame =
         document.createElement(
@@ -874,22 +810,6 @@ function buildAds() {
 
       frame.className =
         "ad-poster-frame";
-
-
-
-      /*
-       * 2Bだけ
-       * 外部ページへのリンク扱い
-       */
-
-      if (item.linkUrl) {
-
-        frame.classList.add(
-          "linked-poster"
-        );
-
-      }
-
 
 
       const image =
@@ -914,96 +834,26 @@ function buildAds() {
         "lazy";
 
 
+      /*
+       * 全広告共通
+       * タップ → 拡大
+       */
 
-      /* =========================
-         IMAGE CLICK
-      ========================== */
+      image.addEventListener(
+        "click",
+        () => {
 
-      if (item.linkUrl) {
+          openImageModal(
+            item
+          );
 
-        /*
-         * 2B広告
-         * → 2Bホームページへ
-         */
-
-        image.addEventListener(
-          "click",
-          () => {
-
-            window.location.href =
-              item.linkUrl;
-
-          }
-        );
-
-
-        image.setAttribute(
-          "role",
-          "link"
-        );
-
-
-        image.setAttribute(
-          "tabindex",
-          "0"
-        );
-
-
-        image.setAttribute(
-          "aria-label",
-          `${item.label}ホームページを開く`
-        );
-
-
-        image.addEventListener(
-          "keydown",
-          (event) => {
-
-            if (
-              event.key === "Enter" ||
-              event.key === " "
-            ) {
-
-              event.preventDefault();
-
-
-              window.location.href =
-                item.linkUrl;
-
-            }
-
-          }
-        );
-
-      }
-
-
-      else {
-
-        /*
-         * その他の広告
-         * → 拡大表示
-         */
-
-        image.addEventListener(
-          "click",
-          () => {
-
-            openImageModal(
-              item
-            );
-
-          }
-        );
-
-      }
-
+        }
+      );
 
 
       frame.appendChild(
         image
       );
-
 
 
       article.appendChild(
@@ -1017,49 +867,7 @@ function buildAds() {
 
 
 
-      /* ========================================
-         2B HOME PAGE BUTTON
-      ======================================== */
-
-      if (item.linkUrl) {
-
-        const siteButton =
-          document.createElement(
-            "a"
-          );
-
-
-        siteButton.href =
-          item.linkUrl;
-
-
-        siteButton.className =
-          "site-link-button";
-
-
-        siteButton.innerHTML = `
-          <span class="site-link-small">
-            もっと詳しく
-          </span>
-
-          <span class="site-link-main">
-            ${item.linkLabel}
-            →
-          </span>
-        `;
-
-
-        article.appendChild(
-          siteButton
-        );
-
-      }
-
-
-
-      /* ========================================
-         DAY 1 ONLY
-      ======================================== */
+      /* DAY 1 */
 
       if (item.day1Only) {
 
@@ -1091,10 +899,7 @@ function buildAds() {
       }
 
 
-
-      /* ========================================
-         LOCATION BUTTON
-      ======================================== */
+      /* LOCATION */
 
       else {
 
@@ -1135,7 +940,6 @@ function buildAds() {
       }
 
 
-
       adsContainer.appendChild(
         article
       );
@@ -1171,6 +975,37 @@ function openImageModal(
 
   modalImage.alt =
     `${item.label} 広告`;
+
+
+
+  /*
+   * 2Bだけ
+   * QRコード部分をクリック可能にする
+   */
+
+  if (
+    qrHotspot &&
+    item.qrLink
+  ) {
+
+    qrHotspot.href =
+      item.qrLink;
+
+
+    qrHotspot.classList.add(
+      "is-visible"
+    );
+
+  }
+
+  else if (qrHotspot) {
+
+    qrHotspot.classList.remove(
+      "is-visible"
+    );
+
+  }
+
 
 
   imageModal.classList.add(
@@ -1222,6 +1057,15 @@ function closeImageModal() {
     "";
 
 
+  if (qrHotspot) {
+
+    qrHotspot.classList.remove(
+      "is-visible"
+    );
+
+  }
+
+
   document.body.style.overflow =
     "";
 
@@ -1230,7 +1074,7 @@ function closeImageModal() {
 
 
 /* ========================================
-   MAP MODAL
+   MAP
 ======================================== */
 
 function openMap(
@@ -1249,16 +1093,9 @@ function openMap(
   }
 
 
-
   mapModalTitle.textContent =
     `${item.label}の場所はこちら`;
 
-
-
-  /*
-   * map.jpg全体に対する
-   * パーセント位置
-   */
 
   mapMarker.style.left =
     `${item.x}%`;
@@ -1268,16 +1105,13 @@ function openMap(
     `${item.y}%`;
 
 
-
   mapMarkerLabel.textContent =
     item.mapLabel ||
     item.label;
 
 
-
   mapMarker.style.borderColor =
     item.mapColor;
-
 
 
   mapMarker.style.background =
@@ -1285,7 +1119,6 @@ function openMap(
       item.mapColor,
       0.86
     );
-
 
 
   mapModal.classList.add(
@@ -1338,7 +1171,7 @@ function closeMap() {
 
 
 /* ========================================
-   COLOR HELPER
+   COLOR
 ======================================== */
 
 function hexToRgba(
@@ -1400,7 +1233,6 @@ document
   );
 
 
-
 document
   .querySelectorAll(
     "[data-close-map]"
@@ -1437,7 +1269,6 @@ imageModal?.addEventListener(
 
   }
 );
-
 
 
 mapModal?.addEventListener(
