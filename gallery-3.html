@@ -13,7 +13,7 @@
 
   <meta
     name="description"
-    content="市商祭の3年生クラス広告ギャラリー。3A〜3Eの広告と模擬店の場所をチェックできます。"
+    content="第60回市商祭 3年生の広告ギャラリーです。"
   >
 
   <link
@@ -24,14 +24,10 @@
 
 
 <body
-  data-gallery-group="grade3"
   id="top"
+  data-gallery-group="grade3"
 >
 
-
-  <!-- =========================
-       FIXED HEADER
-  ========================== -->
 
   <header class="gallery-header">
 
@@ -82,11 +78,6 @@
 
   <main>
 
-
-    <!-- =========================
-         HERO
-    ========================== -->
-
     <section class="gallery-hero">
 
       <div class="hero-decoration hero-decoration-a"></div>
@@ -107,17 +98,13 @@
       </p>
 
       <p class="gallery-intro">
-        気になる広告をチェック。
+        気になる広告をチェック。<br>
         行きたい場所を見つけよう。
       </p>
 
     </section>
 
 
-
-    <!-- =========================
-         CLASS INDEX
-    ========================== -->
 
     <section class="class-index">
 
@@ -134,23 +121,14 @@
 
 
 
-    <!-- =========================
-         GALLERY
-    ========================== -->
-
     <section
       class="ads-container"
       id="adsContainer"
     ></section>
 
-
   </main>
 
 
-
-  <!-- =========================
-       TOP BUTTON
-  ========================== -->
 
   <a
     href="#top"
@@ -163,9 +141,58 @@
 
 
 
-  <!-- =========================
-       IMAGE MODAL
-  ========================== -->
+  <div
+    class="cover-overlay"
+    id="coverOverlay"
+    aria-hidden="true"
+  >
+
+    <div class="cover-card">
+
+      <div class="cover-tag">
+        第60回 市商祭
+      </div>
+
+      <div class="cover-image-wrap">
+
+        <div class="cover-back-shape"></div>
+
+        <img
+          src="images/gallery/cover.jpg"
+          alt="第60回市商祭 表紙"
+          class="cover-image"
+        >
+
+        <span class="cover-sticker">
+          60th
+        </span>
+
+      </div>
+
+
+      <div class="cover-bottom">
+
+        <p class="cover-theme">
+          NEXT
+          <span>未来へつなぐ１歩</span>
+        </p>
+
+        <button
+          type="button"
+          class="cover-enter"
+          id="coverEnter"
+        >
+          ギャラリーを見る
+          <span>→</span>
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
 
   <div
     class="modal image-modal"
@@ -192,10 +219,6 @@
 
 
 
-  <!-- =========================
-       MAP MODAL
-  ========================== -->
-
   <div
     class="modal map-modal"
     id="mapModal"
@@ -214,9 +237,7 @@
 
       <div class="map-modal-heading">
 
-        <p>
-          LOCATION
-        </p>
+        <p>LOCATION</p>
 
         <h2 id="mapModalTitle">
           場所はこちら
@@ -225,10 +246,7 @@
       </div>
 
 
-      <div
-        class="map-stage"
-        id="mapStage"
-      >
+      <div class="map-stage">
 
         <img
           src="images/gallery/map.jpg"
@@ -250,9 +268,7 @@
   </div>
 
 
-
   <script src="gallery.js"></script>
 
 </body>
-
 </html>
