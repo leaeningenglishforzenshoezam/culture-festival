@@ -13,7 +13,7 @@
 
   <meta
     name="description"
-    content="市商祭の1年生クラス広告ギャラリー。1A〜1Eの広告と模擬店の場所をチェックできます。"
+    content="第60回市商祭 1年生の広告ギャラリーです。"
   >
 
   <link
@@ -24,8 +24,8 @@
 
 
 <body
-  data-gallery-group="grade1"
   id="top"
+  data-gallery-group="grade1"
 >
 
 
@@ -83,9 +83,7 @@
   <main>
 
 
-    <!-- =========================
-         HERO
-    ========================== -->
+    <!-- HERO -->
 
     <section class="gallery-hero">
 
@@ -107,7 +105,7 @@
       </p>
 
       <p class="gallery-intro">
-        気になる広告をチェック。
+        気になる広告をチェック。<br>
         行きたい場所を見つけよう。
       </p>
 
@@ -115,9 +113,7 @@
 
 
 
-    <!-- =========================
-         CLASS INDEX
-    ========================== -->
+    <!-- INDEX -->
 
     <section class="class-index">
 
@@ -134,9 +130,7 @@
 
 
 
-    <!-- =========================
-         GALLERY
-    ========================== -->
+    <!-- ADS -->
 
     <section
       class="ads-container"
@@ -148,7 +142,7 @@
 
 
 
-  <!-- TOP BUTTON -->
+  <!-- TOP -->
 
   <a
     href="#top"
@@ -162,8 +156,63 @@
 
 
   <!-- =========================
-       IMAGE MODAL
+       FIRST VISIT COVER
   ========================== -->
+
+  <div
+    class="cover-overlay"
+    id="coverOverlay"
+    aria-hidden="true"
+  >
+
+    <div class="cover-card">
+
+      <div class="cover-tag">
+        第60回 市商祭
+      </div>
+
+      <div class="cover-image-wrap">
+
+        <div class="cover-back-shape"></div>
+
+        <img
+          src="images/gallery/cover.jpg"
+          alt="第60回市商祭 表紙"
+          class="cover-image"
+        >
+
+        <span class="cover-sticker">
+          60th
+        </span>
+
+      </div>
+
+
+      <div class="cover-bottom">
+
+        <p class="cover-theme">
+          NEXT
+          <span>未来へつなぐ１歩</span>
+        </p>
+
+        <button
+          type="button"
+          class="cover-enter"
+          id="coverEnter"
+        >
+          ギャラリーを見る
+          <span>→</span>
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- IMAGE MODAL -->
 
   <div
     class="modal image-modal"
@@ -190,9 +239,7 @@
 
 
 
-  <!-- =========================
-       MAP MODAL
-  ========================== -->
+  <!-- MAP MODAL -->
 
   <div
     class="modal map-modal"
@@ -207,6 +254,7 @@
     >
       ×
     </button>
+
 
     <div class="map-modal-card">
 
@@ -223,10 +271,7 @@
       </div>
 
 
-      <div
-        class="map-stage"
-        id="mapStage"
-      >
+      <div class="map-stage">
 
         <img
           src="images/gallery/map.jpg"
