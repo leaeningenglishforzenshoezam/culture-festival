@@ -469,12 +469,12 @@ button {
 }
 
 
-
 /* ========================================
    ADS
 ======================================== */
 
 .ads-container {
+  width: 100%;
   max-width: 900px;
 
   margin: 0 auto;
@@ -485,66 +485,21 @@ button {
     100px;
 }
 
+
+/*
+ * 1枚の広告が大きくなりすぎないようにする
+ */
 .ad-card {
-  margin-bottom: 70px;
+  width: 100%;
+  max-width: 600px;
+
+  margin:
+    0
+    auto
+    70px;
 
   scroll-margin-top: 115px;
 }
-
-.special-card {
-  padding-bottom: 15px;
-
-  border-bottom:
-    3px dashed
-    rgba(255, 100, 160, 0.25);
-}
-
-.ad-heading {
-  margin-bottom: 12px;
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 10px;
-}
-
-.ad-class-label {
-  display: inline-flex;
-
-  align-items: center;
-  justify-content: center;
-
-  min-width: 68px;
-  min-height: 42px;
-
-  padding:
-    7px
-    15px;
-
-  border-radius: 999px;
-
-  text-align: center;
-
-  font-size: 19px;
-  font-weight: 950;
-
-  line-height: 1.2;
-}
-
-.group-label {
-  color: #fff;
-
-  background:
-    linear-gradient(
-      135deg,
-      var(--pink),
-      var(--orange)
-    );
-}
-
-
-
 /* ========================================
    POSTER
 ======================================== */
