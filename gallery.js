@@ -7,6 +7,11 @@
 
 const galleryData = {
 
+
+  /* ========================================
+     1年生
+  ======================================== */
+
   grade1: [
 
     {
@@ -62,6 +67,10 @@ const galleryData = {
   ],
 
 
+
+  /* ========================================
+     2年生
+  ======================================== */
 
   grade2: [
 
@@ -119,6 +128,10 @@ const galleryData = {
 
 
 
+  /* ========================================
+     3年生
+  ======================================== */
+
   grade3: [
 
     {
@@ -174,6 +187,10 @@ const galleryData = {
   ],
 
 
+
+  /* ========================================
+     団体・ゲスト
+  ======================================== */
 
   other: [
 
@@ -247,6 +264,62 @@ const galleryData = {
       mapColor: "#ff4f93",
       x: 66,
       y: 52
+    },
+
+
+    /* ========================================
+       体育館展示・催し
+    ======================================== */
+
+    {
+      id: "acappella",
+      label: "アカペラ部",
+      image: "images/gallery/acappella.jpg",
+      mapColor: "#ff4f93",
+      mapLabel: "体育館",
+      x: 15,
+      y: 40
+    },
+
+    {
+      id: "flower-arrangement",
+      label: "華道部",
+      image: "images/gallery/flower-arrangement.jpg",
+      mapColor: "#ff4f93",
+      mapLabel: "体育館",
+      x: 15,
+      y: 40
+    },
+
+    {
+      id: "calligraphy",
+      label: "書道部",
+      image: "images/gallery/calligraphy.jpg",
+      mapColor: "#ff4f93",
+      mapLabel: "体育館",
+      x: 15,
+      y: 40
+    },
+
+
+    /* ========================================
+       市商祭1日目のみ
+    ======================================== */
+
+    {
+      id: "brass-band",
+      label: "吹奏楽部",
+      image: "images/gallery/brass-band.jpg",
+      day1Only: true,
+      notice: "市商祭1日目に発表予定の演目です。"
+    },
+
+    {
+      id: "english-club",
+      label: "英語部",
+      image: "images/gallery/english-club.jpg",
+      day1Only: true,
+      notice: "市商祭1日目に発表予定の演目です。"
     }
 
   ]
@@ -315,8 +388,10 @@ function buildIndex() {
     const link =
       document.createElement("a");
 
+
     link.href =
       `#ad-${item.id}`;
+
 
     link.className =
       "index-button";
@@ -326,6 +401,15 @@ function buildIndex() {
 
       link.classList.add(
         item.colorClass
+      );
+
+    }
+
+
+    if (group === "other") {
+
+      link.classList.add(
+        "other-index-button"
       );
 
     }
@@ -368,14 +452,19 @@ function buildAds() {
     article.className =
       "ad-card";
 
+
     article.id =
       `ad-${item.id}`;
 
 
-    /* heading */
+
+    /* =========================
+       HEADING
+    ========================== */
 
     const heading =
       document.createElement("div");
+
 
     heading.className =
       "ad-heading";
@@ -383,6 +472,7 @@ function buildAds() {
 
     const label =
       document.createElement("span");
+
 
     label.className =
       "ad-class-label";
@@ -395,13 +485,12 @@ function buildAds() {
       );
 
     }
+
     else {
 
-      label.style.color =
-        "#ffffff";
-
-      label.style.background =
-        "linear-gradient(135deg,#ff4f93,#f06b40)";
+      label.classList.add(
+        "group-label"
+      );
 
     }
 
@@ -410,14 +499,19 @@ function buildAds() {
       item.label;
 
 
-    heading.appendChild(label);
+    heading.appendChild(
+      label
+    );
 
 
 
-    /* image */
+    /* =========================
+       IMAGE
+    ========================== */
 
     const frame =
       document.createElement("div");
+
 
     frame.className =
       "ad-poster-frame";
@@ -426,14 +520,18 @@ function buildAds() {
     const image =
       document.createElement("img");
 
+
     image.src =
       item.image;
+
 
     image.alt =
       `${item.label} 広告`;
 
+
     image.className =
       "ad-poster";
+
 
     image.loading =
       "lazy";
@@ -449,32 +547,8 @@ function buildAds() {
     );
 
 
-    frame.appendChild(image);
-
-
-
-    /* location */
-
-    const locationButton =
-      document.createElement("button");
-
-    locationButton.type =
-      "button";
-
-    locationButton.className =
-      "location-button";
-
-    locationButton.textContent =
-      `${item.label}の場所はこちら`;
-
-
-    locationButton.addEventListener(
-      "click",
-      () => {
-
-        openMap(item);
-
-      }
+    frame.appendChild(
+      image
     );
 
 
@@ -483,13 +557,83 @@ function buildAds() {
       heading
     );
 
+
     article.appendChild(
       frame
     );
 
-    article.appendChild(
-      locationButton
-    );
+
+
+    /* =========================
+       DAY 1 ONLY
+    ========================== */
+
+    if (item.day1Only) {
+
+      const notice =
+        document.createElement("div");
+
+
+      notice.className =
+        "day1-notice";
+
+
+      notice.innerHTML = `
+        <span class="day1-badge">
+          DAY 1
+        </span>
+
+        <p>
+          ${item.notice}
+        </p>
+      `;
+
+
+      article.appendChild(
+        notice
+      );
+
+    }
+
+
+    /* =========================
+       LOCATION BUTTON
+    ========================== */
+
+    else {
+
+      const locationButton =
+        document.createElement("button");
+
+
+      locationButton.type =
+        "button";
+
+
+      locationButton.className =
+        "location-button";
+
+
+      locationButton.textContent =
+        `${item.label}の場所はこちら`;
+
+
+      locationButton.addEventListener(
+        "click",
+        () => {
+
+          openMap(item);
+
+        }
+      );
+
+
+      article.appendChild(
+        locationButton
+      );
+
+    }
+
 
 
     adsContainer.appendChild(
@@ -508,20 +652,29 @@ function buildAds() {
 
 function openImageModal(item) {
 
+  if (!imageModal || !modalImage) {
+    return;
+  }
+
+
   modalImage.src =
     item.image;
 
+
   modalImage.alt =
     `${item.label} 広告`;
+
 
   imageModal.classList.add(
     "is-open"
   );
 
+
   imageModal.setAttribute(
     "aria-hidden",
     "false"
   );
+
 
   document.body.style.overflow =
     "hidden";
@@ -532,16 +685,25 @@ function openImageModal(item) {
 
 function closeImageModal() {
 
+  if (!imageModal || !modalImage) {
+    return;
+  }
+
+
   imageModal.classList.remove(
     "is-open"
   );
+
 
   imageModal.setAttribute(
     "aria-hidden",
     "true"
   );
 
-  modalImage.src = "";
+
+  modalImage.src =
+    "";
+
 
   document.body.style.overflow =
     "";
@@ -556,6 +718,16 @@ function closeImageModal() {
 
 function openMap(item) {
 
+  if (
+    !mapModal ||
+    !mapModalTitle ||
+    !mapMarker ||
+    !mapMarkerLabel
+  ) {
+    return;
+  }
+
+
   mapModalTitle.textContent =
     `${item.label}の場所はこちら`;
 
@@ -563,27 +735,30 @@ function openMap(item) {
   mapMarker.style.left =
     `${item.x}%`;
 
+
   mapMarker.style.top =
     `${item.y}%`;
 
 
   mapMarkerLabel.textContent =
-    item.label;
+    item.mapLabel || item.label;
 
 
   mapMarker.style.borderColor =
     item.mapColor;
 
+
   mapMarker.style.background =
     hexToRgba(
       item.mapColor,
-      0.85
+      0.86
     );
 
 
   mapModal.classList.add(
     "is-open"
   );
+
 
   mapModal.setAttribute(
     "aria-hidden",
@@ -600,14 +775,21 @@ function openMap(item) {
 
 function closeMap() {
 
+  if (!mapModal) {
+    return;
+  }
+
+
   mapModal.classList.remove(
     "is-open"
   );
+
 
   mapModal.setAttribute(
     "aria-hidden",
     "true"
   );
+
 
   document.body.style.overflow =
     "";
@@ -628,20 +810,27 @@ function hexToRgba(
   const value =
     hex.replace("#", "");
 
+
   const bigint =
-    parseInt(value, 16);
+    parseInt(
+      value,
+      16
+    );
+
 
   const r =
     (bigint >> 16) & 255;
 
+
   const g =
     (bigint >> 8) & 255;
+
 
   const b =
     bigint & 255;
 
 
-  return `rgba(${r},${g},${b},${alpha})`;
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
 
 }
 
@@ -665,6 +854,7 @@ document
   });
 
 
+
 document
   .querySelectorAll(
     "[data-close-map]"
@@ -680,26 +870,37 @@ document
 
 
 
-/* click background */
+/* ========================================
+   CLICK BACKGROUND
+======================================== */
 
 imageModal?.addEventListener(
   "click",
   (event) => {
 
-    if (event.target === imageModal) {
+    if (
+      event.target === imageModal
+    ) {
+
       closeImageModal();
+
     }
 
   }
 );
+
 
 
 mapModal?.addEventListener(
   "click",
   (event) => {
 
-    if (event.target === mapModal) {
+    if (
+      event.target === mapModal
+    ) {
+
       closeMap();
+
     }
 
   }
@@ -707,17 +908,25 @@ mapModal?.addEventListener(
 
 
 
-/* escape */
+/* ========================================
+   ESCAPE KEY
+======================================== */
 
 document.addEventListener(
   "keydown",
   (event) => {
 
-    if (event.key !== "Escape") {
+    if (
+      event.key !== "Escape"
+    ) {
+
       return;
+
     }
 
+
     closeImageModal();
+
     closeMap();
 
   }
@@ -730,4 +939,5 @@ document.addEventListener(
 ======================================== */
 
 buildIndex();
+
 buildAds();
