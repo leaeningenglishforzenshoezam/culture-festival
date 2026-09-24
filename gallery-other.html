@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>団体・ゲスト｜市商祭 AD GALLERY</title>
+
+  <meta
+    name="description"
+    content="市商祭の部活動・団体・ゲストの広告ギャラリー。広告と催し物の場所をチェックできます。"
+  >
+
+  <link
+    rel="stylesheet"
+    href="gallery.css"
+  >
+</head>
+
+
+<body
+  data-gallery-group="other"
+  id="top"
+>
+
+
+  <!-- =========================
+       FIXED HEADER
+  ========================== -->
+
+  <header class="gallery-header">
+
+    <a
+      href="#top"
+      class="gallery-logo"
+    >
+      市商祭
+      <span>AD GALLERY</span>
+    </a>
+
+
+    <nav class="grade-nav">
+
+      <a
+        href="gallery-1.html"
+        class="grade-nav-link"
+      >
+        1年生
+      </a>
+
+      <a
+        href="gallery-2.html"
+        class="grade-nav-link"
+      >
+        2年生
+      </a>
+
+      <a
+        href="gallery-3.html"
+        class="grade-nav-link"
+      >
+        3年生
+      </a>
+
+      <a
+        href="gallery-other.html"
+        class="grade-nav-link active"
+      >
+        団体・ゲスト
+      </a>
+
+    </nav>
+
+  </header>
+
+
+
+  <main>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="gallery-hero">
+
+      <div class="hero-decoration hero-decoration-a"></div>
+      <div class="hero-decoration hero-decoration-b"></div>
+      <div class="hero-decoration hero-decoration-c"></div>
+
+      <p class="festival-label">
+        第60回 市商祭
+      </p>
+
+      <h1>
+        <span>NEXT</span>
+        未来へつなぐ１歩
+      </h1>
+
+      <p class="gallery-title">
+        AD GALLERY
+      </p>
+
+      <p class="gallery-intro">
+        部活動・団体・ゲストの広告をチェック。
+        気になる催しを見つけよう。
+      </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         GROUP INDEX
+    ========================== -->
+
+    <section class="class-index">
+
+      <p class="index-label">
+        団体・ゲスト
+      </p>
+
+      <div
+        class="class-index-grid other-index"
+        id="classIndex"
+      ></div>
+
+    </section>
+
+
+
+    <!-- =========================
+         GALLERY
+    ========================== -->
+
+    <section
+      class="ads-container"
+      id="adsContainer"
+    ></section>
+
+
+  </main>
+
+
+
+  <!-- =========================
+       TOP BUTTON
+  ========================== -->
+
+  <a
+    href="#top"
+    class="back-top"
+    aria-label="ページ上部へ戻る"
+  >
+    ↑
+    <span>TOP</span>
+  </a>
+
+
+
+  <!-- =========================
+       IMAGE MODAL
+  ========================== -->
+
+  <div
+    class="modal image-modal"
+    id="imageModal"
+    aria-hidden="true"
+  >
+
+    <button
+      class="modal-close"
+      data-close-modal
+      aria-label="閉じる"
+    >
+      ×
+    </button>
+
+    <img
+      src=""
+      alt=""
+      id="modalImage"
+      class="modal-poster"
+    >
+
+  </div>
+
+
+
+  <!-- =========================
+       MAP MODAL
+  ========================== -->
+
+  <div
+    class="modal map-modal"
+    id="mapModal"
+    aria-hidden="true"
+  >
+
+    <button
+      class="modal-close"
+      data-close-map
+      aria-label="閉じる"
+    >
+      ×
+    </button>
+
+    <div class="map-modal-card">
+
+      <div class="map-modal-heading">
+
+        <p>
+          LOCATION
+        </p>
+
+        <h2 id="mapModalTitle">
+          場所はこちら
+        </h2>
+
+      </div>
+
+
+      <div
+        class="map-stage"
+        id="mapStage"
+      >
+
+        <img
+          src="images/gallery/map.jpg"
+          alt="市商祭 模擬店配置図"
+          class="map-image"
+        >
+
+        <div
+          class="map-marker"
+          id="mapMarker"
+        >
+          <span id="mapMarkerLabel"></span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <script src="gallery.js"></script>
+
+</body>
+
+</html>
