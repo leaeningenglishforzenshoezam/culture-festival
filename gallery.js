@@ -15,6 +15,17 @@ const galleryData = {
   grade1: [
 
     {
+      id: "grade1-exhibition",
+      label: "1年生共同展示",
+      image: "images/gallery/grade1-exhibition.jpg",
+      special: true,
+      mapLabel: "昇降口前",
+      mapColor: "#ff7fb0",
+      x: 31,
+      y: 74
+    },
+
+    {
       id: "1A",
       label: "1A",
       image: "images/gallery/1a.jpg",
@@ -267,9 +278,8 @@ const galleryData = {
     },
 
 
-    /* ========================================
-       体育館展示・催し
-    ======================================== */
+
+    /* 体育館 */
 
     {
       id: "acappella",
@@ -302,16 +312,16 @@ const galleryData = {
     },
 
 
-    /* ========================================
-       市商祭1日目のみ
-    ======================================== */
+
+    /* 1日目のみ */
 
     {
       id: "brass-band",
       label: "吹奏楽部",
       image: "images/gallery/brass-band.jpg",
       day1Only: true,
-      notice: "市商祭1日目に発表予定の演目です。"
+      notice:
+        "市商祭1日目に発表予定の演目です。"
     },
 
     {
@@ -319,7 +329,8 @@ const galleryData = {
       label: "英語部",
       image: "images/gallery/english-club.jpg",
       day1Only: true,
-      notice: "市商祭1日目に発表予定の演目です。"
+      notice:
+        "市商祭1日目に発表予定の演目です。"
     }
 
   ]
@@ -368,6 +379,92 @@ const mapMarker =
 const mapMarkerLabel =
   document.getElementById("mapMarkerLabel");
 
+const coverOverlay =
+  document.getElementById("coverOverlay");
+
+const coverEnter =
+  document.getElementById("coverEnter");
+
+
+
+/* ========================================
+   FIRST VISIT COVER
+======================================== */
+
+function setupCover() {
+
+  if (
+    !coverOverlay ||
+    !coverEnter
+  ) {
+    return;
+  }
+
+
+  const alreadySeen =
+    sessionStorage.getItem(
+      "festivalCoverSeen"
+    );
+
+
+  if (!alreadySeen) {
+
+    coverOverlay.classList.add(
+      "is-open"
+    );
+
+    coverOverlay.setAttribute(
+      "aria-hidden",
+      "false"
+    );
+
+    document.body.classList.add(
+      "cover-open"
+    );
+
+  }
+
+
+  coverEnter.addEventListener(
+    "click",
+    () => {
+
+      sessionStorage.setItem(
+        "festivalCoverSeen",
+        "true"
+      );
+
+      coverOverlay.classList.add(
+        "is-closing"
+      );
+
+
+      setTimeout(
+        () => {
+
+          coverOverlay.classList.remove(
+            "is-open",
+            "is-closing"
+          );
+
+          coverOverlay.setAttribute(
+            "aria-hidden",
+            "true"
+          );
+
+          document.body.classList.remove(
+            "cover-open"
+          );
+
+        },
+        420
+      );
+
+    }
+  );
+
+}
+
 
 
 /* ========================================
@@ -379,6 +476,7 @@ function buildIndex() {
   if (!indexContainer) {
     return;
   }
+
 
   indexContainer.innerHTML = "";
 
@@ -406,6 +504,15 @@ function buildIndex() {
     }
 
 
+    if (item.special) {
+
+      link.classList.add(
+        "special-index-button"
+      );
+
+    }
+
+
     if (group === "other") {
 
       link.classList.add(
@@ -416,7 +523,9 @@ function buildIndex() {
 
 
     link.textContent =
-      item.label;
+      item.special
+        ? "共同展示"
+        : item.label;
 
 
     indexContainer.appendChild(
@@ -453,14 +562,21 @@ function buildAds() {
       "ad-card";
 
 
+    if (item.special) {
+
+      article.classList.add(
+        "special-card"
+      );
+
+    }
+
+
     article.id =
       `ad-${item.id}`;
 
 
 
-    /* =========================
-       HEADING
-    ========================== */
+    /* HEADING */
 
     const heading =
       document.createElement("div");
@@ -486,6 +602,14 @@ function buildAds() {
 
     }
 
+    else if (item.special) {
+
+      label.classList.add(
+        "special-label"
+      );
+
+    }
+
     else {
 
       label.classList.add(
@@ -505,9 +629,7 @@ function buildAds() {
 
 
 
-    /* =========================
-       IMAGE
-    ========================== */
+    /* IMAGE */
 
     const frame =
       document.createElement("div");
@@ -552,7 +674,6 @@ function buildAds() {
     );
 
 
-
     article.appendChild(
       heading
     );
@@ -564,9 +685,7 @@ function buildAds() {
 
 
 
-    /* =========================
-       DAY 1 ONLY
-    ========================== */
+    /* DAY 1 */
 
     if (item.day1Only) {
 
@@ -596,9 +715,8 @@ function buildAds() {
     }
 
 
-    /* =========================
-       LOCATION BUTTON
-    ========================== */
+
+    /* LOCATION */
 
     else {
 
@@ -635,7 +753,6 @@ function buildAds() {
     }
 
 
-
     adsContainer.appendChild(
       article
     );
@@ -652,7 +769,10 @@ function buildAds() {
 
 function openImageModal(item) {
 
-  if (!imageModal || !modalImage) {
+  if (
+    !imageModal ||
+    !modalImage
+  ) {
     return;
   }
 
@@ -685,7 +805,10 @@ function openImageModal(item) {
 
 function closeImageModal() {
 
-  if (!imageModal || !modalImage) {
+  if (
+    !imageModal ||
+    !modalImage
+  ) {
     return;
   }
 
@@ -713,7 +836,7 @@ function closeImageModal() {
 
 
 /* ========================================
-   MAP MODAL
+   MAP
 ======================================== */
 
 function openMap(item) {
@@ -741,7 +864,8 @@ function openMap(item) {
 
 
   mapMarkerLabel.textContent =
-    item.mapLabel || item.label;
+    item.mapLabel ||
+    item.label;
 
 
   mapMarker.style.borderColor =
@@ -799,7 +923,7 @@ function closeMap() {
 
 
 /* ========================================
-   COLOR HELPER
+   COLOR
 ======================================== */
 
 function hexToRgba(
@@ -870,10 +994,6 @@ document
 
 
 
-/* ========================================
-   CLICK BACKGROUND
-======================================== */
-
 imageModal?.addEventListener(
   "click",
   (event) => {
@@ -908,10 +1028,6 @@ mapModal?.addEventListener(
 
 
 
-/* ========================================
-   ESCAPE KEY
-======================================== */
-
 document.addEventListener(
   "keydown",
   (event) => {
@@ -919,9 +1035,7 @@ document.addEventListener(
     if (
       event.key !== "Escape"
     ) {
-
       return;
-
     }
 
 
@@ -937,6 +1051,8 @@ document.addEventListener(
 /* ========================================
    START
 ======================================== */
+
+setupCover();
 
 buildIndex();
 
