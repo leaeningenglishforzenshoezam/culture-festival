@@ -8,12 +8,15 @@
   padding: 0;
 }
 
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 120px;
 }
 
+
 body {
+
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -23,22 +26,28 @@ body {
     sans-serif;
 
   color: #191919;
-  background: #fffaf2;
+
+  background:
+    #fffaf2;
 
   line-height: 1.7;
 
   overflow-x: hidden;
+
 }
+
 
 img {
   display: block;
   max-width: 100%;
 }
 
+
 a {
   color: inherit;
   text-decoration: none;
 }
+
 
 button {
   font: inherit;
@@ -53,15 +62,23 @@ button {
 :root {
 
   --red: #ef3e45;
+
   --blue: #1474d4;
+
   --yellow: #ffd632;
+
   --black: #1b1b1b;
+
   --green: #38a965;
 
   --pink: #ff4f93;
+
+  --orange: #f06b40;
+
   --cyan: #28c2e5;
 
   --cream: #fffaf2;
+
   --white: #ffffff;
 
 }
@@ -75,21 +92,38 @@ button {
 .gallery-header {
 
   position: sticky;
+
   top: 0;
-  z-index: 500;
+
+  z-index: 1000;
 
   padding:
     10px
-    12px;
+    10px
+    11px;
 
   background:
-    rgba(255, 250, 242, 0.95);
+    rgba(
+      255,
+      250,
+      242,
+      0.96
+    );
 
-  backdrop-filter: blur(12px);
+  backdrop-filter:
+    blur(12px);
+
+  -webkit-backdrop-filter:
+    blur(12px);
 
   border-bottom:
     1px solid
-    rgba(0, 0, 0, 0.07);
+    rgba(
+      0,
+      0,
+      0,
+      0.07
+    );
 
 }
 
@@ -101,6 +135,7 @@ button {
   margin-bottom: 8px;
 
   font-size: 13px;
+
   font-weight: 950;
 
   letter-spacing: -0.02em;
@@ -131,7 +166,10 @@ button {
   display: grid;
 
   grid-template-columns:
-    repeat(4, minmax(0, 1fr));
+    repeat(
+      4,
+      minmax(0, 1fr)
+    );
 
   gap: 5px;
 
@@ -140,9 +178,26 @@ button {
 
 .grade-nav-link {
 
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 40px;
+
   padding:
-    9px
-    4px;
+    8px
+    3px;
+
+  border:
+    1px solid
+    rgba(
+      0,
+      0,
+      0,
+      0.08
+    );
 
   border-radius: 10px;
 
@@ -150,14 +205,16 @@ button {
 
   background: #fff;
 
-  border:
-    1px solid
-    rgba(0, 0, 0, 0.08);
-
   font-size:
-    clamp(10px, 2.8vw, 13px);
+    clamp(
+      10px,
+      2.8vw,
+      13px
+    );
 
   font-weight: 900;
+
+  line-height: 1.2;
 
   white-space: nowrap;
 
@@ -181,7 +238,8 @@ button {
 
   color: #fff;
 
-  background: var(--black);
+  background:
+    var(--black);
 
 }
 
@@ -213,6 +271,7 @@ button {
 .festival-label {
 
   position: relative;
+
   z-index: 2;
 
   color: #555;
@@ -229,6 +288,7 @@ button {
 .gallery-hero h1 {
 
   position: relative;
+
   z-index: 2;
 
   margin-top: 8px;
@@ -253,7 +313,8 @@ button {
 
   margin-bottom: 4px;
 
-  color: var(--pink);
+  color:
+    var(--pink);
 
   font-size:
     clamp(
@@ -272,6 +333,7 @@ button {
 .gallery-title {
 
   position: relative;
+
   z-index: 2;
 
   margin-top: 16px;
@@ -293,6 +355,7 @@ button {
 .gallery-intro {
 
   position: relative;
+
   z-index: 2;
 
   margin-top: 9px;
@@ -307,7 +370,9 @@ button {
 
 
 
-/* decorative shapes */
+/* ========================================
+   HERO DECORATION
+======================================== */
 
 .hero-decoration {
 
@@ -323,9 +388,11 @@ button {
 .hero-decoration-a {
 
   width: 140px;
+
   height: 140px;
 
   left: -55px;
+
   top: 30px;
 
   background:
@@ -337,9 +404,11 @@ button {
 .hero-decoration-b {
 
   width: 110px;
+
   height: 110px;
 
   right: -35px;
+
   bottom: 25px;
 
   background:
@@ -351,6 +420,7 @@ button {
 .hero-decoration-c {
 
   width: 55px;
+
   height: 55px;
 
   right: 20%;
@@ -365,22 +435,23 @@ button {
 
 
 /* ========================================
-   CLASS INDEX
+   CLASS / GROUP INDEX
 ======================================== */
 
 .class-index {
 
   position: relative;
+
   z-index: 4;
 
   max-width: 950px;
 
   margin:
-    -25px auto
+    -25px
+    auto
     35px;
 
-  padding:
-    18px;
+  padding: 18px;
 
 }
 
@@ -403,7 +474,10 @@ button {
   display: grid;
 
   grid-template-columns:
-    repeat(5, 1fr);
+    repeat(
+      5,
+      1fr
+    );
 
   gap: 8px;
 
@@ -417,19 +491,32 @@ button {
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
+  padding:
+    5px;
+
   border-radius: 14px;
+
+  text-align: center;
 
   font-size: 18px;
 
   font-weight: 950;
 
+  line-height: 1.2;
+
   box-shadow:
     0
     8px
     18px
-    rgba(0, 0, 0, 0.08);
+    rgba(
+      0,
+      0,
+      0,
+      0.08
+    );
 
   transition:
     transform 0.2s ease;
@@ -445,47 +532,86 @@ button {
 }
 
 
-/* class colors */
+
+/* ========================================
+   CLASS COLORS
+======================================== */
 
 .color-a {
-  color: white;
-  background: var(--red);
+
+  color: #fff;
+
+  background:
+    var(--red);
+
 }
+
 
 .color-b {
-  color: white;
-  background: var(--blue);
+
+  color: #fff;
+
+  background:
+    var(--blue);
+
 }
+
 
 .color-c {
+
   color: #222;
-  background: var(--yellow);
+
+  background:
+    var(--yellow);
+
 }
+
 
 .color-d {
+
   color: #111;
-  background: white;
-  border: 2px solid #222;
+
+  background: #fff;
+
+  border:
+    2px solid #222;
+
 }
+
 
 .color-e {
-  color: white;
-  background: var(--green);
+
+  color: #fff;
+
+  background:
+    var(--green);
+
 }
 
+
+
+/* ========================================
+   OTHER INDEX
+======================================== */
 
 .other-index {
 
   grid-template-columns:
-    repeat(2, 1fr);
+    repeat(
+      2,
+      1fr
+    );
 
 }
 
 
-.other-index .index-button {
+.other-index-button {
+
+  min-height: 52px;
 
   padding:
-    10px;
+    8px
+    6px;
 
   color: #fff;
 
@@ -493,10 +619,12 @@ button {
     linear-gradient(
       135deg,
       var(--pink),
-      #f06b40
+      var(--orange)
     );
 
-  font-size: 13px;
+  font-size: 12px;
+
+  line-height: 1.25;
 
 }
 
@@ -507,6 +635,8 @@ button {
 ======================================== */
 
 .ads-container {
+
+  width: 100%;
 
   max-width: 900px;
 
@@ -544,24 +674,55 @@ button {
 
 .ad-class-label {
 
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
   min-width: 68px;
 
+  min-height: 42px;
+
   padding:
-    8px
+    7px
     15px;
 
   border-radius: 999px;
 
   text-align: center;
 
-  font-size: 20px;
+  font-size: 19px;
 
   font-weight: 950;
+
+  line-height: 1.2;
 
 }
 
 
+.group-label {
+
+  color: #fff;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--pink),
+      var(--orange)
+    );
+
+}
+
+
+
+/* ========================================
+   POSTER
+======================================== */
+
 .ad-poster-frame {
+
+  width: 100%;
 
   overflow: hidden;
 
@@ -575,15 +736,27 @@ button {
     0
     14px
     35px
-    rgba(0, 0, 0, 0.12);
+    rgba(
+      0,
+      0,
+      0,
+      0.12
+    );
 
 }
 
 
 .ad-poster {
 
+  display: block;
+
   width: 100%;
+
   height: auto;
+
+  max-height: none;
+
+  object-fit: contain;
 
   border-radius: 17px;
 
@@ -591,6 +764,11 @@ button {
 
 }
 
+
+
+/* ========================================
+   LOCATION BUTTON
+======================================== */
 
 .location-button {
 
@@ -603,18 +781,33 @@ button {
     18px;
 
   border: 0;
+
   border-radius: 14px;
 
   color: white;
+
   background: #222;
 
   font-size: 14px;
+
   font-weight: 900;
 
   cursor: pointer;
 
+  box-shadow:
+    0
+    8px
+    18px
+    rgba(
+      0,
+      0,
+      0,
+      0.10
+    );
+
   transition:
-    transform 0.2s ease;
+    transform 0.2s ease,
+    opacity 0.2s ease;
 
 }
 
@@ -629,6 +822,72 @@ button {
 
 
 /* ========================================
+   DAY 1 NOTICE
+======================================== */
+
+.day1-notice {
+
+  margin-top: 12px;
+
+  padding:
+    15px
+    16px;
+
+  border:
+    2px solid
+    #ff9e32;
+
+  border-radius: 15px;
+
+  background:
+    #fff8e9;
+
+}
+
+
+.day1-badge {
+
+  display: inline-block;
+
+  margin-bottom: 5px;
+
+  padding:
+    3px
+    10px;
+
+  border-radius: 999px;
+
+  color: #fff;
+
+  background:
+    #f28a18;
+
+  font-size: 11px;
+
+  font-weight: 950;
+
+  letter-spacing: 0.08em;
+
+}
+
+
+.day1-notice p {
+
+  margin: 0;
+
+  color: #333;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  line-height: 1.6;
+
+}
+
+
+
+/* ========================================
    TOP BUTTON
 ======================================== */
 
@@ -637,11 +896,13 @@ button {
   position: fixed;
 
   right: 14px;
+
   bottom: 16px;
 
-  z-index: 300;
+  z-index: 800;
 
   width: 52px;
+
   height: 52px;
 
   display: flex;
@@ -649,6 +910,7 @@ button {
   flex-direction: column;
 
   align-items: center;
+
   justify-content: center;
 
   border-radius: 50%;
@@ -656,10 +918,27 @@ button {
   color: white;
 
   background:
-    rgba(20, 20, 20, 0.9);
+    rgba(
+      20,
+      20,
+      20,
+      0.90
+    );
 
   font-size: 16px;
+
   font-weight: 950;
+
+  box-shadow:
+    0
+    8px
+    20px
+    rgba(
+      0,
+      0,
+      0,
+      0.18
+    );
 
 }
 
@@ -689,12 +968,18 @@ button {
   display: none;
 
   align-items: center;
+
   justify-content: center;
 
   padding: 16px;
 
   background:
-    rgba(0, 0, 0, 0.92);
+    rgba(
+      0,
+      0,
+      0,
+      0.92
+    );
 
 }
 
@@ -711,14 +996,17 @@ button {
   position: fixed;
 
   right: 14px;
+
   top: 14px;
 
   z-index: 2200;
 
   width: 44px;
+
   height: 44px;
 
   border: 0;
+
   border-radius: 50%;
 
   color: #222;
@@ -727,20 +1015,26 @@ button {
 
   font-size: 28px;
 
+  line-height: 1;
+
   cursor: pointer;
 
 }
 
 
 
-/* image */
+/* ========================================
+   IMAGE MODAL
+======================================== */
 
 .modal-poster {
 
   width: auto;
+
   height: auto;
 
   max-width: 96vw;
+
   max-height: 94vh;
 
   object-fit: contain;
@@ -750,7 +1044,7 @@ button {
 
 
 /* ========================================
-   MAP
+   MAP MODAL
 ======================================== */
 
 .map-modal-card {
@@ -758,15 +1052,14 @@ button {
   width:
     min(
       96vw,
-      850px
+      1000px
     );
 
   max-height: 92vh;
 
   overflow-y: auto;
 
-  padding:
-    16px;
+  padding: 16px;
 
   border-radius: 22px;
 
@@ -802,12 +1095,12 @@ button {
 
   font-size:
     clamp(
-      26px,
+      24px,
       7vw,
       40px
     );
 
-  line-height: 1.05;
+  line-height: 1.1;
 
 }
 
@@ -818,34 +1111,57 @@ button {
 
   width: 100%;
 
+  overflow: hidden;
+
+  border-radius: 14px;
+
+  background: #f3f3f3;
+
 }
 
 
 .map-image {
 
+  display: block;
+
   width: 100%;
+
   height: auto;
 
 }
 
+
+
+/* ========================================
+   MAP MARKER
+======================================== */
 
 .map-marker {
 
   position: absolute;
 
   left: 50%;
+
   top: 50%;
 
-  width: 58px;
-  height: 58px;
+  min-width: 62px;
+
+  min-height: 62px;
+
+  padding:
+    8px;
 
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
-  border: 5px solid var(--pink);
-  border-radius: 50%;
+  border:
+    5px solid
+    var(--pink);
+
+  border-radius: 999px;
 
   color: white;
 
@@ -854,15 +1170,22 @@ button {
       255,
       79,
       147,
-      0.82
+      0.85
     );
 
-  font-size: 14px;
+  font-size: 12px;
 
   font-weight: 950;
 
+  line-height: 1.1;
+
+  text-align: center;
+
   transform:
-    translate(-50%, -50%);
+    translate(
+      -50%,
+      -50%
+    );
 
   box-shadow:
     0
@@ -889,23 +1212,23 @@ button {
   0%,
   100% {
 
-    box-shadow:
-      0
-      0
-      0
-      7px
-      rgba(255,79,147,.18);
+    transform:
+      translate(
+        -50%,
+        -50%
+      )
+      scale(1);
 
   }
 
   50% {
 
-    box-shadow:
-      0
-      0
-      0
-      15px
-      rgba(255,79,147,.05);
+    transform:
+      translate(
+        -50%,
+        -50%
+      )
+      scale(1.08);
 
   }
 
@@ -917,7 +1240,9 @@ button {
    PC
 ======================================== */
 
-@media (min-width: 800px) {
+@media (
+  min-width: 800px
+) {
 
   .gallery-header {
 
@@ -928,6 +1253,7 @@ button {
     display: flex;
 
     align-items: center;
+
     justify-content: space-between;
 
   }
@@ -942,7 +1268,7 @@ button {
 
   .grade-nav {
 
-    width: 520px;
+    width: 540px;
 
   }
 
@@ -957,6 +1283,15 @@ button {
   }
 
 
+  .class-index {
+
+    padding:
+      20px
+      30px;
+
+  }
+
+
   .ad-card {
 
     margin-bottom: 95px;
@@ -967,6 +1302,51 @@ button {
   .ad-poster-frame {
 
     padding: 8px;
+
+  }
+
+
+  .other-index {
+
+    grid-template-columns:
+      repeat(
+        4,
+        1fr
+      );
+
+  }
+
+}
+
+
+
+/* ========================================
+   VERY SMALL SCREEN
+======================================== */
+
+@media (
+  max-width: 380px
+) {
+
+  .grade-nav-link {
+
+    font-size: 9px;
+
+  }
+
+
+  .gallery-header {
+
+    padding-left: 6px;
+
+    padding-right: 6px;
+
+  }
+
+
+  .other-index-button {
+
+    font-size: 11px;
 
   }
 
