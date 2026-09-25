@@ -1,16 +1,7 @@
 "use strict";
 
 
-/* ========================================
-   DATA
-======================================== */
-
 const galleryData = {
-
-
-  /* ========================================
-     1年生
-  ======================================== */
 
   grade1: [
 
@@ -18,378 +9,295 @@ const galleryData = {
       id: "grade1-exhibition",
       label: "1年生共同展示",
       image: "images/gallery/grade1-exhibition.jpg",
-
       special: true,
-
       mapLabel: "昇降口前",
       mapColor: "#ff7fb0",
-
-      x: 29.0,
-      y: 78.0
+      x: 39.92,
+      y: 75.65
     },
 
-// ==============================
-// 1年生
-// ==============================
+    {
+      id: "1A",
+      label: "1A",
+      image: "images/gallery/1a.jpg",
+      colorClass: "color-a",
+      mapColor: "#ef3e45",
+      x: 41.82,
+      y: 34.41
+    },
 
-{
-  id: "1A",
-  label: "1A",
-  image: "images/gallery/1a.jpg",
-  colorClass: "color-a",
-  mapColor: "#ef3e45",
-  x: 41.82,
-  y: 34.62
-},
+    {
+      id: "1B",
+      label: "1B",
+      image: "images/gallery/1b.jpg",
+      colorClass: "color-b",
+      mapColor: "#1474d4",
+      x: 81.91,
+      y: 74.96
+    },
 
-{
-  id: "1B",
-  label: "1B",
-  image: "images/gallery/1b.jpg",
-  colorClass: "color-b",
-  mapColor: "#1474d4",
-  x: 81.84,
-  y: 75.37
-},
+    {
+      id: "1C",
+      label: "1C",
+      image: "images/gallery/1c.jpg",
+      colorClass: "color-c",
+      mapColor: "#ffd632",
+      x: 54.95,
+      y: 57.45
+    },
 
-{
-  id: "1C",
-  label: "1C",
-  image: "images/gallery/1c.jpg",
-  colorClass: "color-c",
-  mapColor: "#ffd632",
-  x: 54.90,
-  y: 57.78
-},
+    {
+      id: "1D",
+      label: "1D",
+      image: "images/gallery/1d.jpg",
+      colorClass: "color-d",
+      mapColor: "#222222",
+      x: 75.17,
+      y: 84.87
+    },
 
-{
-  id: "1D",
-  label: "1D",
-  image: "images/gallery/1d.jpg",
-  colorClass: "color-d",
-  mapColor: "#222222",
-  x: 75.03,
-  y: 85.54
-},
+    {
+      id: "1E",
+      label: "1E",
+      image: "images/gallery/1e.jpg",
+      colorClass: "color-e",
+      mapColor: "#38a965",
+      x: 65.67,
+      y: 44.09
+    }
 
-{
-  id: "1E",
-  label: "1E",
-  image: "images/gallery/1e.jpg",
-  colorClass: "color-e",
-  mapColor: "#38a965",
-  x: 65.75,
-  y: 44.71
-},
+  ],
 
 
+  grade2: [
 
-// ==============================
-// 2年生
-// ==============================
+    {
+      id: "2A",
+      label: "2A",
+      image: "images/gallery/2a.jpg",
+      colorClass: "color-a",
+      mapColor: "#ef3e45",
+      x: 64.29,
+      y: 74.73
+    },
 
-{
-  id: "2A",
-  label: "2A",
-  image: "images/gallery/2a.jpg",
-  colorClass: "color-a",
-  mapColor: "#ef3e45",
-  x: 64.54,
-  y: 75.37
-},
+    {
+      id: "2B",
+      label: "2B",
+      image: "images/gallery/2b.jpg",
+      colorClass: "color-b",
+      mapColor: "#1474d4",
+      x: 65.5,
+      y: 37.17,
 
-{
-  id: "2B",
-  label: "2B",
-  image: "images/gallery/2b.jpg",
-  colorClass: "color-b",
-  mapColor: "#1474d4",
-  x: 65.75,
-  y: 37.71,
+      qrLink:
+        "https://leaeningenglishforzenshoezam.github.io/culture-festival/"
+    },
 
-  qrLink:
-    "https://leaeningenglishforzenshoezam.github.io/culture-festival/"
-},
+    {
+      id: "2C",
+      label: "2C",
+      image: "images/gallery/2c.jpg",
+      colorClass: "color-c",
+      mapColor: "#ffd632",
+      x: 36.46,
+      y: 54.69
+    },
 
-{
-  id: "2C",
-  label: "2C",
-  image: "images/gallery/2c.jpg",
-  colorClass: "color-c",
-  mapColor: "#ffd632",
-  x: 36.50,
-  y: 54.79
-},
+    {
+      id: "2D",
+      label: "2D",
+      image: "images/gallery/2d.jpg",
+      colorClass: "color-d",
+      mapColor: "#222222",
+      x: 24.71,
+      y: 45.01
+    },
 
-{
-  id: "2D",
-  label: "2D",
-  image: "images/gallery/2d.jpg",
-  colorClass: "color-d",
-  mapColor: "#222222",
-  x: 24.90,
-  y: 45.44
-},
+    {
+      id: "2E",
+      label: "2E",
+      image: "images/gallery/2e.jpg",
+      colorClass: "color-e",
+      mapColor: "#38a965",
+      x: 54.61,
+      y: 69.2
+    }
 
-{
-  id: "2E",
-  label: "2E",
-  image: "images/gallery/2e.jpg",
-  colorClass: "color-e",
-  mapColor: "#38a965",
-  x: 54.90,
-  y: 68.83
-},
-
+  ],
 
 
-  // ==============================
-// 3年生
-// ==============================
+  grade3: [
 
-{
-  id: "3A",
-  label: "3A",
-  image: "images/gallery/3a.jpg",
-  colorClass: "color-a",
-  mapColor: "#ef3e45",
-  x: 56.01,
-  y: 34.48
-},
+    {
+      id: "3A",
+      label: "3A",
+      image: "images/gallery/3a.jpg",
+      colorClass: "color-a",
+      mapColor: "#ef3e45",
+      x: 55.99,
+      y: 34.64
+    },
 
-{
-  id: "3B",
-  label: "3B",
-  image: "images/gallery/3b.jpg",
-  colorClass: "color-b",
-  mapColor: "#1474d4",
-  x: 46.27,
-  y: 54.79
-},
+    {
+      id: "3B",
+      label: "3B",
+      image: "images/gallery/3b.jpg",
+      colorClass: "color-b",
+      mapColor: "#1474d4",
+      x: 46.31,
+      y: 54.69
+    },
 
-{
-  id: "3C",
-  label: "3C",
-  image: "images/gallery/3c.jpg",
-  colorClass: "color-c",
-  mapColor: "#ffd632",
-  x: 85.98,
-  y: 92.77
-},
+    {
+      id: "3C",
+      label: "3C",
+      image: "images/gallery/3c.jpg",
+      colorClass: "color-c",
+      mapColor: "#ffd632",
+      x: 86.06,
+      y: 92.47
+    },
 
-{
-  id: "3D",
-  label: "3D",
-  image: "images/gallery/3d.jpg",
-  colorClass: "color-d",
-  mapColor: "#222222",
-  x: 24.90,
-  y: 34.39
-},
+    {
+      id: "3D",
+      label: "3D",
+      image: "images/gallery/3d.jpg",
+      colorClass: "color-d",
+      mapColor: "#222222",
+      x: 24.71,
+      y: 34.41
+    },
 
-{
-  id: "3E",
-  label: "3E",
-  image: "images/gallery/3e.jpg",
-  colorClass: "color-e",
-  mapColor: "#38a965",
-  x: 59.98,
-  y: 92.77
-},
+    {
+      id: "3E",
+      label: "3E",
+      image: "images/gallery/3e.jpg",
+      colorClass: "color-e",
+      mapColor: "#38a965",
+      x: 59.79,
+      y: 92.47
+    }
 
+  ],
 
-  /* ========================================
-     団体・ゲスト
-  ======================================== */
 
   other: [
 
-
-    /* 美術部 */
-
- {
-  id: "art",
-  label: "美術部",
-  image: "images/gallery/art.jpg",
-
-  mapLabel: "美術部",
-  mapColor: "#ff4f93",
-
-  x: 59.3,
-  y: 87.5
-},
-
-
-    /* 家庭部 */
+    {
+      id: "art",
+      label: "美術部",
+      image: "images/gallery/art.jpg",
+      mapLabel: "美術部",
+      mapColor: "#ff4f93",
+      x: 66.36,
+      y: 85.33
+    },
 
     {
       id: "homeeconomics",
       label: "家庭部",
       image: "images/gallery/homeeconomics.jpg",
-
       mapLabel: "家庭部",
       mapColor: "#ff4f93",
-
-      x: 59.3,
-      y: 87.5
+      x: 64.98,
+      y: 85.33
     },
-
-
-    /* 茶道部 */
 
     {
       id: "tea",
       label: "茶道部",
       image: "images/gallery/tea.jpg",
-
-      mapLabel: "茶道",
+      mapLabel: "茶道部",
       mapColor: "#ff4f93",
-
-      x: 55.2,
-      y: 82.4
+      x: 62.9,
+      y: 79.57
     },
-
-
-    /* 同窓会 */
 
     {
       id: "alumni",
       label: "同窓会",
       image: "images/gallery/alumni.jpg",
-
       mapLabel: "同窓会",
       mapColor: "#ff4f93",
-
-      x: 69.8,
-      y: 52.2
+      x: 76.38,
+      y: 50.54
     },
-
-
-    /* PTA */
 
     {
       id: "pta",
       label: "PTA",
       image: "images/gallery/pta.jpg",
-
       mapLabel: "PTA",
       mapColor: "#ff4f93",
-
-      x: 76.2,
-      y: 52.2
+      x: 83.12,
+      y: 51
     },
-
-
-    /* 生徒会 */
 
     {
       id: "student-council",
       label: "生徒会",
       image: "images/gallery/student-council.jpg",
-
       mapLabel: "生徒会",
       mapColor: "#ff4f93",
-
-      x: 50.4,
-      y: 65.2
+      x: 54.95,
+      y: 62.98
     },
 
-
-    /* 日本語学院 */
-
-   {
-  id: "japanese-school",
-  label: "大和国際日本語学院",
-  image: "images/gallery/japanese-school.jpg",
-
-  mapLabel: "大和国際日本語学院",
-  mapColor: "#ff4f93",
-
-  x: 30.5,
-  y: 35.0
-},
-
-
-    /* ========================================
-       アカペラ部：昇降口前
-    ======================================== */
+    {
+      id: "japanese-school",
+      label: "大和国際日本語学院",
+      image: "images/gallery/japanese-school.jpg",
+      mapLabel: "大和国際日本語学院",
+      mapColor: "#ff4f93",
+      x: 33.18,
+      y: 33.49
+    },
 
     {
       id: "acappella",
       label: "アカペラ部",
       image: "images/gallery/acappella.jpg",
-
       mapLabel: "昇降口前",
       mapColor: "#ff4f93",
-
-      x: 29.0,
-      y: 78.0
+      x: 38.71,
+      y: 78.65
     },
-
-
-    /* ========================================
-       体育館
-    ======================================== */
 
     {
       id: "flower-arrangement",
       label: "華道部",
-
-      image:
-        "images/gallery/flower-arrangement.jpg",
-
+      image: "images/gallery/flower-arrangement.jpg",
       mapLabel: "体育館",
       mapColor: "#ff4f93",
-
-      x: 11.0,
-      y: 40.0
+      x: 11.41,
+      y: 38.56
     },
-
 
     {
       id: "calligraphy",
       label: "書道部",
-
-      image:
-        "images/gallery/calligraphy.jpg",
-
+      image: "images/gallery/calligraphy.jpg",
       mapLabel: "体育館",
       mapColor: "#ff4f93",
-
-      x: 11.0,
-      y: 40.0
+      x: 10.54,
+      y: 38.1
     },
-
-
-    /* ========================================
-       市商祭1日目のみ
-    ======================================== */
 
     {
       id: "brass-band",
       label: "吹奏楽部",
-
-      image:
-        "images/gallery/brass-band.jpg",
-
+      image: "images/gallery/brass-band.jpg",
       day1Only: true,
-
-      notice:
-        "市商祭1日目に発表予定の演目です。"
+      notice: "市商祭1日目に発表予定の演目です。"
     },
-
 
     {
       id: "english-club",
       label: "英語部",
-
-      image:
-        "images/gallery/english-club.jpg",
-
+      image: "images/gallery/english-club.jpg",
       day1Only: true,
-
-      notice:
-        "市商祭1日目に発表予定の演目です。"
+      notice: "市商祭1日目に発表予定の演目です。"
     }
 
   ]
