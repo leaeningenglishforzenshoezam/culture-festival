@@ -256,19 +256,19 @@ const galleryData = {
   other: [
 
 
-    /* 美術部：体育館 */
+    /* 美術部 */
 
-    {
-      id: "art",
-      label: "美術部",
-      image: "images/gallery/art.jpg",
+ {
+  id: "art",
+  label: "美術部",
+  image: "images/gallery/art.jpg",
 
-      mapLabel: "体育館",
-      mapColor: "#ff4f93",
+  mapLabel: "美術部",
+  mapColor: "#ff4f93",
 
-      x: 11.0,
-      y: 40.0
-    },
+  x: 59.3,
+  y: 87.5
+},
 
 
     /* 家庭部 */
@@ -348,17 +348,17 @@ const galleryData = {
 
     /* 日本語学院 */
 
-    {
-      id: "japanese-school",
-      label: "日本語学院",
-      image: "images/gallery/japanese-school.jpg",
+   {
+  id: "japanese-school",
+  label: "大和国際日本語学院",
+  image: "images/gallery/japanese-school.jpg",
 
-      mapLabel: "日本語学校",
-      mapColor: "#ff4f93",
+  mapLabel: "大和国際日本語学院",
+  mapColor: "#ff4f93",
 
-      x: 30.5,
-      y: 35.0
-    },
+  x: 30.5,
+  y: 35.0
+},
 
 
     /* ========================================
