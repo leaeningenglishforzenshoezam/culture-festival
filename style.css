@@ -2064,3 +2064,88 @@ footer {
   font-size: 12px;
   font-weight: bold;
 }
+
+/* =========================
+   NAV ACTIONS
+========================= */
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+/* 市商祭全体ギャラリー */
+
+.nav-gallery-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 38px;
+
+  padding:
+    8px
+    12px;
+
+  border-radius: 999px;
+
+  color: #222;
+
+  background: #fff;
+
+  border:
+    1px solid
+    rgba(0, 0, 0, 0.14);
+
+  font-size: 11px;
+  font-weight: 900;
+
+  line-height: 1.15;
+
+  white-space: nowrap;
+
+  box-shadow:
+    0
+    4px
+    12px
+    rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.nav-gallery-button:active {
+  transform: scale(0.96);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .nav {
+    gap: 8px;
+  }
+
+  .nav-actions {
+    gap: 5px;
+  }
+
+  .nav-gallery-button {
+    min-height: 34px;
+
+    padding:
+      6px
+      8px;
+
+    font-size: 9px;
+  }
+
+}
