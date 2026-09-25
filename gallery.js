@@ -28,225 +28,174 @@ const galleryData = {
       y: 78.0
     },
 
-
-    {
-      id: "1A",
-      label: "1A",
-      image: "images/gallery/1a.jpg",
-
-      colorClass: "color-a",
-      mapColor: "#ef3e45",
-
-      x: 38.2,
-      y: 35.5
-    },
-
-
-    {
-      id: "1B",
-      label: "1B",
-      image: "images/gallery/1b.jpg",
-
-      colorClass: "color-b",
-      mapColor: "#1474d4",
-
-      x: 75.0,
-      y: 77.8
-    },
-
-
-    {
-      id: "1C",
-      label: "1C",
-      image: "images/gallery/1c.jpg",
-
-      colorClass: "color-c",
-      mapColor: "#ffd632",
-
-      x: 50.3,
-      y: 59.5
-    },
-
-
-    {
-      id: "1D",
-      label: "1D",
-      image: "images/gallery/1d.jpg",
-
-      colorClass: "color-d",
-      mapColor: "#222222",
-
-      x: 68.9,
-      y: 88.2
-    },
-
-
-    {
-      id: "1E",
-      label: "1E",
-      image: "images/gallery/1e.jpg",
-
-      colorClass: "color-e",
-      mapColor: "#38a965",
-
-      x: 60.4,
-      y: 45.8
-    }
-
-  ],
-
-
-
-  /* ========================================
-     2年生
-  ======================================== */
-
-  grade2: [
-
-    {
-      id: "2A",
-      label: "2A",
-      image: "images/gallery/2a.jpg",
-
-      colorClass: "color-a",
-      mapColor: "#ef3e45",
-
-      x: 59.1,
-      y: 77.8
-    },
-
-
-    {
-      id: "2B",
-      label: "2B",
-      image: "images/gallery/2b.jpg",
-
-      colorClass: "color-b",
-      mapColor: "#1474d4",
-
-      x: 60.3,
-      y: 38.6,
-
-      /* 拡大時のみQR部分をリンク化 */
-      qrLink:
-        "https://leaeningenglishforzenshoezam.github.io/culture-festival/"
-    },
-
-
-    {
-      id: "2C",
-      label: "2C",
-      image: "images/gallery/2c.jpg",
-
-      colorClass: "color-c",
-      mapColor: "#ffd632",
-
-      x: 33.3,
-      y: 56.5
-    },
-
-
-    {
-      id: "2D",
-      label: "2D",
-      image: "images/gallery/2d.jpg",
-
-      colorClass: "color-d",
-      mapColor: "#222222",
-
-      x: 22.9,
-      y: 46.7
-    },
-
-
-    {
-      id: "2E",
-      label: "2E",
-      image: "images/gallery/2e.jpg",
-
-      colorClass: "color-e",
-      mapColor: "#38a965",
-
-      x: 50.3,
-      y: 71.1
-    }
-
-  ],
-
-
-
-  /* ========================================
-     3年生
-  ======================================== */
-
-  grade3: [
-
-    {
-      id: "3A",
-      label: "3A",
-      image: "images/gallery/3a.jpg",
-
-      colorClass: "color-a",
-      mapColor: "#ef3e45",
-
-      x: 51.2,
-      y: 35.5
-    },
-
-
-    {
-      id: "3B",
-      label: "3B",
-      image: "images/gallery/3b.jpg",
-
-      colorClass: "color-b",
-      mapColor: "#1474d4",
-
-      x: 42.5,
-      y: 56.5
-    },
-
-
-    {
-      id: "3C",
-      label: "3C",
-      image: "images/gallery/3c.jpg",
-
-      colorClass: "color-c",
-      mapColor: "#ffd632",
-
-      x: 78.8,
-      y: 95.5
-    },
-
-
-    {
-      id: "3D",
-      label: "3D",
-      image: "images/gallery/3d.jpg",
-
-      colorClass: "color-d",
-      mapColor: "#222222",
-
-      x: 22.9,
-      y: 35.4
-    },
-
-
-    {
-      id: "3E",
-      label: "3E",
-      image: "images/gallery/3e.jpg",
-
-      colorClass: "color-e",
-      mapColor: "#38a965",
-
-      x: 55.0,
-      y: 95.5
-    }
-
-  ],
-
+// ==============================
+// 1年生
+// ==============================
+
+{
+  id: "1A",
+  label: "1A",
+  image: "images/gallery/1a.jpg",
+  colorClass: "color-a",
+  mapColor: "#ef3e45",
+  x: 41.82,
+  y: 34.62
+},
+
+{
+  id: "1B",
+  label: "1B",
+  image: "images/gallery/1b.jpg",
+  colorClass: "color-b",
+  mapColor: "#1474d4",
+  x: 81.84,
+  y: 75.37
+},
+
+{
+  id: "1C",
+  label: "1C",
+  image: "images/gallery/1c.jpg",
+  colorClass: "color-c",
+  mapColor: "#ffd632",
+  x: 54.90,
+  y: 57.78
+},
+
+{
+  id: "1D",
+  label: "1D",
+  image: "images/gallery/1d.jpg",
+  colorClass: "color-d",
+  mapColor: "#222222",
+  x: 75.03,
+  y: 85.54
+},
+
+{
+  id: "1E",
+  label: "1E",
+  image: "images/gallery/1e.jpg",
+  colorClass: "color-e",
+  mapColor: "#38a965",
+  x: 65.75,
+  y: 44.71
+},
+
+
+
+// ==============================
+// 2年生
+// ==============================
+
+{
+  id: "2A",
+  label: "2A",
+  image: "images/gallery/2a.jpg",
+  colorClass: "color-a",
+  mapColor: "#ef3e45",
+  x: 64.54,
+  y: 75.37
+},
+
+{
+  id: "2B",
+  label: "2B",
+  image: "images/gallery/2b.jpg",
+  colorClass: "color-b",
+  mapColor: "#1474d4",
+  x: 65.75,
+  y: 37.71,
+
+  qrLink:
+    "https://leaeningenglishforzenshoezam.github.io/culture-festival/"
+},
+
+{
+  id: "2C",
+  label: "2C",
+  image: "images/gallery/2c.jpg",
+  colorClass: "color-c",
+  mapColor: "#ffd632",
+  x: 36.50,
+  y: 54.79
+},
+
+{
+  id: "2D",
+  label: "2D",
+  image: "images/gallery/2d.jpg",
+  colorClass: "color-d",
+  mapColor: "#222222",
+  x: 24.90,
+  y: 45.44
+},
+
+{
+  id: "2E",
+  label: "2E",
+  image: "images/gallery/2e.jpg",
+  colorClass: "color-e",
+  mapColor: "#38a965",
+  x: 54.90,
+  y: 68.83
+},
+
+
+
+  // ==============================
+// 3年生
+// ==============================
+
+{
+  id: "3A",
+  label: "3A",
+  image: "images/gallery/3a.jpg",
+  colorClass: "color-a",
+  mapColor: "#ef3e45",
+  x: 56.01,
+  y: 34.48
+},
+
+{
+  id: "3B",
+  label: "3B",
+  image: "images/gallery/3b.jpg",
+  colorClass: "color-b",
+  mapColor: "#1474d4",
+  x: 46.27,
+  y: 54.79
+},
+
+{
+  id: "3C",
+  label: "3C",
+  image: "images/gallery/3c.jpg",
+  colorClass: "color-c",
+  mapColor: "#ffd632",
+  x: 85.98,
+  y: 92.77
+},
+
+{
+  id: "3D",
+  label: "3D",
+  image: "images/gallery/3d.jpg",
+  colorClass: "color-d",
+  mapColor: "#222222",
+  x: 24.90,
+  y: 34.39
+},
+
+{
+  id: "3E",
+  label: "3E",
+  image: "images/gallery/3e.jpg",
+  colorClass: "color-e",
+  mapColor: "#38a965",
+  x: 59.98,
+  y: 92.77
+},
 
 
   /* ========================================
