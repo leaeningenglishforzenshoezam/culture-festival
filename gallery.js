@@ -255,6 +255,18 @@ const galleryData = {
     },
 
     {
+  id: "commerce",
+  label: "商業科",
+  image: "images/gallery/commerce.jpg",
+
+  mapLabel: "商業科",
+  mapColor: "#ff4f93",
+
+  x: 83.67,
+  y: 57.75
+},
+
+    {
       id: "acappella",
       label: "アカペラ部",
       image: "images/gallery/acappella.jpg",
