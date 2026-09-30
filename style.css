@@ -2149,3 +2149,137 @@ footer {
   }
 
 }
+
+/* ========================================
+   PRESALE BONUS
+======================================== */
+
+.presale-bonus {
+  margin-top: 18px;
+  margin-bottom: 18px;
+
+  padding: 16px 18px;
+
+  border: 2px solid #1474d4;
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(20, 116, 212, 0.08),
+      rgba(255, 255, 255, 0.96)
+    );
+
+  box-shadow:
+    0 8px 20px
+    rgba(20, 116, 212, 0.10);
+}
+
+
+.presale-bonus-label {
+  display: inline-block;
+
+  margin: 0 0 8px;
+
+  padding: 5px 10px;
+
+  border-radius: 999px;
+
+  color: #fff;
+  background: #1474d4;
+
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .08em;
+}
+
+
+.presale-bonus-text {
+  margin: 0;
+
+  color: #222;
+
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.65;
+}
+
+
+.presale-bonus-text strong {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #1474d4;
+
+  font-size: 20px;
+  font-weight: 950;
+  line-height: 1.35;
+}
+
+
+.presale-bonus-note {
+  display: block;
+
+  margin-top: 11px;
+
+  color: #555;
+
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+
+.presale-bonus-max {
+  display: block;
+
+  margin-top: 9px;
+
+  color: #222;
+
+
+   @media (max-width: 600px) {
+
+  .presale-bonus {
+    padding: 14px 15px;
+    border-radius: 16px;
+  }
+
+  .presale-bonus-text {
+    font-size: 14px;
+  }
+
+  .presale-bonus-text strong {
+    font-size: 18px;
+  }
+
+  .presale-bonus-note {
+    font-size: 12px;
+  }
+
+  .presale-bonus-max {
+    font-size: 12px;
+  }
+
+  .presale-bonus-max b {
+    font-size: 17px;
+  }
+
+}
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.55;
+}
+
+
+.presale-bonus-max b {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #1474d4;
+
+  font-size: 18px;
+  font-weight: 950;
+}
