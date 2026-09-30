@@ -2738,3 +2738,269 @@ footer {
 
   text-transform: uppercase;
 }
+
+/* ========================================
+   DAILY RECORD CHALLENGE
+======================================== */
+
+.record-challenge {
+  position: relative;
+
+  margin-top: 22px;
+  padding: 20px 18px;
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fff8e8 0%,
+      #ffffff 52%,
+      #f3fbf7 100%
+    );
+
+  border: 2px solid rgba(154, 113, 48, .18);
+
+  box-shadow:
+    0 10px 24px
+    rgba(0, 0, 0, .07);
+
+  overflow: hidden;
+}
+
+
+.record-challenge::after {
+  content: "";
+
+  position: absolute;
+  right: -35px;
+  top: -35px;
+
+  width: 110px;
+  height: 110px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(0, 98, 65, .06);
+}
+
+
+/* 上部 */
+
+.record-challenge-top {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.record-challenge-tag {
+  display: inline-block;
+
+  padding: 5px 10px;
+
+  border-radius: 999px;
+
+  color: #fff;
+  background: #222;
+
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: .10em;
+}
+
+
+.record-challenge-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+
+  color: #fff;
+  background: #c89b3c;
+
+  font-size: 14px;
+  font-weight: 900;
+}
+
+
+/* 見出し */
+
+.record-challenge-kicker {
+  margin:
+    15px
+    0
+    2px;
+
+  color: #666;
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+
+.record-challenge h3 {
+  margin: 0;
+
+  color: #222;
+
+  font-size: 24px;
+  font-weight: 950;
+
+  line-height: 1.25;
+}
+
+
+/* 50個 */
+
+.record-challenge-number {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+
+  margin:
+    15px
+    0;
+
+  padding: 11px;
+
+  border-radius: 18px;
+
+  background: #fff;
+
+  box-shadow:
+    0 5px 15px
+    rgba(0, 0, 0, .06);
+}
+
+
+.record-challenge-number span {
+  margin-right: 8px;
+
+  color: #888;
+
+  font-size: 10px;
+  font-weight: 900;
+
+  letter-spacing: .08em;
+}
+
+
+.record-challenge-number strong {
+  color: #1474d4;
+
+  font-size: 48px;
+  font-weight: 1000;
+
+  line-height: 1;
+}
+
+
+.record-challenge-number small {
+  margin-left: 4px;
+
+  color: #1474d4;
+
+  font-size: 15px;
+  font-weight: 950;
+}
+
+
+/* 賞品 */
+
+.record-prize {
+  padding: 15px;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #006241,
+      #087c58
+    );
+
+  color: #fff;
+
+  text-align: center;
+}
+
+
+.record-prize-small {
+  display: inline-block;
+
+  margin-bottom: 7px;
+
+  padding: 4px 8px;
+
+  border-radius: 999px;
+
+  background:
+    rgba(255, 255, 255, .18);
+
+  font-size: 10px;
+  font-weight: 900;
+}
+
+
+.record-prize p {
+  margin:
+    0
+    0
+    7px;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+.record-prize p strong {
+  font-weight: 950;
+}
+
+
+.record-prize-main {
+  font-size: 21px;
+  font-weight: 950;
+
+  line-height: 1.25;
+}
+
+
+.record-prize-main span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #ffe18a;
+
+  font-size: 16px;
+}
+
+
+/* 補足 */
+
+.record-challenge-note {
+  margin:
+    12px
+    0
+    0;
+
+  color: #666;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  line-height: 1.6;
+
+  text-align: center;
+}
